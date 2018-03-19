@@ -236,6 +236,147 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xiaotiandada.github.io/2018/03/19/lolSix周年活动页面/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小田">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/24250627?s=400&u=3aef13d0b582adab9a4e95ef51607ad1ab2c845f&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小田的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/19/lolSix周年活动页面/" itemprop="url">lolSix周年活动页面</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-19T12:27:36+08:00">
+                2018-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>小白文采不好,大佬们看见了多多指点,自己的代码可能也有很多”毒瘤”希望大佬们指正,蟹蟹~~</p>
+<p>在掘金看到了一个大佬发的 <a href="https://juejin.im/entry/59ad11f3f265da247158203d" target="_blank" rel="noopener">LOL六周年里的按钮动画</a> 的文章</p>
+<p>效果非常 very nice 也很有意思</p>
+<p>于是进 <a href="http://lol.qq.com/act/a20170810sixyears/index.html?ADTAG=lolweb.index" target="_blank" rel="noopener">lolSix周年活动页面</a> 看看效果 只剩下哇塞!哇塞!哇塞!</p>
+<p>于是自己决定试试,参考首页写一部分效果,于是… 有图有真相 </p>
+<p><img src="/2018/03/19/lolSix周年活动页面/lolsix.png" alt="效果图"> </p>
+<p>ps: <a href="https://xiaotiandada.github.io/lolSix/">demo</a> <a href="https://github.com/xiaotiandada/lolSix" target="_blank" rel="noopener">demo仓库</a></p>
+<p>如果觉得不错的话,可以给个star鼓励一下 蟹蟹~~</p>
+<p>两个动画都是通过改变class来完成的效果,简单粗暴 赞~(≧▽≦)/~\</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    // 定义所需要的变量</span><br><span class="line">    <span class="built_in">let</span> navBtns = $(<span class="string">'#nav-ul i'</span>)</span><br><span class="line">    <span class="built_in">let</span> navBtnli = $(<span class="string">'#nav-ul li'</span>)</span><br><span class="line">    <span class="built_in">let</span> navhs = $(<span class="string">'#nav li'</span>)</span><br><span class="line">    <span class="built_in">let</span> navhem = $(<span class="string">'#nav em'</span>)</span><br><span class="line">    // 两个改变class的计数变量</span><br><span class="line">    <span class="built_in">let</span> numLi = &#123;</span><br><span class="line">        numi: 1,</span><br><span class="line">        numh: 1</span><br><span class="line">    &#125;</span><br><span class="line">    // 清楚定时器的变量</span><br><span class="line">    <span class="built_in">let</span> time = null</span><br><span class="line"></span><br><span class="line">    // 鼠标经过和移除 触发run方法</span><br><span class="line">    navBtnli.on(<span class="string">'mouseover'</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        <span class="built_in">let</span> navI = $(this).children(<span class="string">'i'</span>)</span><br><span class="line">        run(navI, <span class="string">'ans2_btn'</span>, numLi.numi)</span><br><span class="line">    &#125;)</span><br><span class="line">    navBtnli.on(<span class="string">'mouseout'</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        <span class="built_in">let</span> target = $(this).children(<span class="string">'i'</span>)</span><br><span class="line">        stop(target)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    navhs.on(<span class="string">'mouseover'</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        $(this).removeClass(<span class="string">'ligb'</span>)</span><br><span class="line">        <span class="built_in">let</span> navh = $(this).children(<span class="string">'em'</span>)</span><br><span class="line">        run(navh, <span class="string">'ans_btn'</span>, numLi.numh)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    navhs.on(<span class="string">'mouseout'</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        <span class="built_in">let</span> target = $(this).children(<span class="string">'em'</span>)</span><br><span class="line">        stop(target)</span><br><span class="line">        $(this).addClass(<span class="string">'ligb'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    // 接受三个参数, 需要改变的对象, 需要改变的名字, 需要改变的数</span><br><span class="line">    <span class="keyword">function</span> run(obj, name, num) &#123;</span><br><span class="line">        // js定时器setTimeout 无法调用局部变量的解决办法</span><br><span class="line">        <span class="keyword">function</span> <span class="function"><span class="title">runs</span></span>() &#123;</span><br><span class="line">            <span class="keyword">if</span> (num &gt; 25) &#123;</span><br><span class="line">                num = 1</span><br><span class="line">            &#125;</span><br><span class="line">            obj.css(<span class="string">'display'</span>, <span class="string">'block'</span>)</span><br><span class="line">            obj.removeClass()</span><br><span class="line">            obj.addClass(nameNav + num)</span><br><span class="line">            num++</span><br><span class="line">            time = setTimeout(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                clearTimeout(time)</span><br><span class="line">                runs()</span><br><span class="line">            &#125;, 30)</span><br><span class="line">        &#125;</span><br><span class="line">        runs()</span><br><span class="line">    &#125;</span><br><span class="line">    // 停止动画</span><br><span class="line">    <span class="keyword">function</span> stop(target) &#123;</span><br><span class="line">        clearTimeout(time)</span><br><span class="line">        target.css(<span class="string">'display'</span>, <span class="string">'none'</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<p>html结构请参考 官方页面或者我的仓库里面的html文件</p>
+<p>然后就是中间的 flash 动画,使用了html object标签,</p>
+<p>但是我在Ubuntu上面chrome测试的时候正常没有问题,(自己在Ubuntu开虚拟机上win测试,IE11,360有效果,chrome,firefox就没有了,懵逼 希望有大佬可以跟我提点一二)</p>
+<p>但是在Firefox测试的时候不会显示,</p>
+<p>于是用了兼容的处理方法,先贴一个通用的处理方法(自己也研究了一会儿,第一次接触2333~~),</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 这是活动页面的解决办法</span><br><span class="line">// 大家也可以看看这个文档 https://github.com/swfobject/swfobject </span><br><span class="line">// An open <span class="built_in">source</span> Javascript framework <span class="keyword">for</span> detecting the Adobe Flash Player plugin and embedding Flash (swf) files.</span><br><span class="line">// 自己英文比较垃圾 chrome 翻译过来就是</span><br><span class="line">// 用于检测Adobe Flash Player插件并嵌入Flash（swf）文件的开源Javascript框架。</span><br><span class="line"></span><br><span class="line">// 这个文件可以引用腾讯的,也可以下载,也可以新建文件复制粘贴</span><br><span class="line">&lt;script src=<span class="string">"./public/js/swfobject.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">"index.swf"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var params = &#123;</span><br><span class="line">        scale: <span class="string">"noscale"</span>,</span><br><span class="line">        wmode: <span class="string">"transparent"</span>,</span><br><span class="line">        align: <span class="string">"middle"</span>,</span><br><span class="line">        allowFullscreen: <span class="string">"true"</span>,</span><br><span class="line">        allowScriptAccess: <span class="string">"always"</span>,</span><br><span class="line">        FlashVars: <span class="string">"timer=1480586966506&amp;endtimer=1481094000000"</span></span><br><span class="line">    &#125;</span><br><span class="line">    swfobject.embedSWF(<span class="string">"index.swf"</span>, <span class="string">"mymovie"</span>, <span class="string">"100%"</span>, <span class="string">"670"</span>, <span class="string">"8.0.0"</span>,<span class="string">"expressInstall.swf"</span>, null, params);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>虽然解决了引入swf动画的兼容问题,但是在firefox上面根本不显示啊 23333~~~</p>
+<p>大佬的解决办法非常简单 请继续细心观看文章!</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 提前在html结构上面写一个静态的替代图片,然后隐藏</span><br><span class="line">&lt;div class=<span class="string">"logob"</span>&gt;英雄联盟6周年盛典&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">// 这里是swf文件的位置</span><br><span class="line">&lt;div id=<span class="string">"mymovie"</span> class=<span class="string">"mymovie"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">// 通过判断 来显示静态图片(虽然没有了swf动画,但是总不不显示比较好 赞 学习了~!)</span><br><span class="line"> setTimeout(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    <span class="keyword">if</span> ($(<span class="string">".mymovie"</span>).length &gt; 0) &#123;</span><br><span class="line">        $(<span class="string">".logob"</span>).css(&#123;</span><br><span class="line">            <span class="string">"display"</span>: <span class="string">"block"</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, 1000)</span><br></pre></td></tr></table></figure>
+<p>大概就是跌么多了! 如果有不对的地方希望大佬们多多指正,</p>
+<p>也可以加小白我交流2333~~ Qq: 952822399</p>
+<p>自己大二也快要毕业了QAQ,希望被大佬们带走!!!</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://xiaotiandada.github.io/2018/02/14/情人节学写html5微信游戏/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -979,7 +1120,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
