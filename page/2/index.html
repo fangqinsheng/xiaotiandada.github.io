@@ -236,6 +236,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xiaotiandada.github.io/2018/05/19/模仿san的hover动画/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小田">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/24250627?s=400&u=3aef13d0b582adab9a4e95ef51607ad1ab2c845f&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小田的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/模仿san的hover动画/" itemprop="url">模仿san的hover动画</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T01:10:14+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在百度前端技术学院学习 设计师学院 绿(大佬)的课程 (第一课QAQ) <a href="http://ife.baidu.com/course/detail/id/18" target="_blank" rel="noopener">传送门</a></p>
+<p>然后模仿san官网的动画效果 <a href="https://baidu.github.io/san/" target="_blank" rel="noopener">san</a></p>
+<p>这是我模仿的效果 <a href="https://xiaotiandada.github.io/Case/Anime/sanDemo/app/">传送们</a> pc端食用更佳！</p>
+<p>大佬的实现已经很棒了 个人只让部分动画变得平滑 比如说鼠标移出的时候增加了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: transform .3s;</span><br></pre></td></tr></table></figure>
+<p>这样可以让鼠标移出Div的时候更加平滑</p>
+<p>分界线～～～</p>
+<hr>
+<p>首先贴出资料和大佬的教程</p>
+<ul>
+<li><a href="http://ife.baidu.com/course/detail/id/18" target="_blank" rel="noopener">http://ife.baidu.com/course/detail/id/18</a></li>
+<li><a href="https://zhuanlan.zhihu.com/uxelement" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/uxelement</a></li>
+<li><a href="https://baidu.github.io/san/" target="_blank" rel="noopener">https://baidu.github.io/san/</a></li>
+<li><a href="https://github.com/airbnb/lottie-web" target="_blank" rel="noopener">https://github.com/airbnb/lottie-web</a></li>
+<li><a href="https://codepen.io/airnan/project/editor/ZeNONO/" target="_blank" rel="noopener">https://codepen.io/airnan/project/editor/ZeNONO/</a></li>
+<li><a href="https://www.youtube.com/watch?v=5XMUJdjI0L8" target="_blank" rel="noopener">https://www.youtube.com/watch?v=5XMUJdjI0L8</a></li>
+<li>……</li>
+</ul>
+<p>大概就是这么写 大家可以去Google搜教程 官方案例很不错</p>
+<p>首先布局 结构和样式都可以借鉴san官网 利用控制台(so easy~)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"resource-block"</span>&gt;</span><br><span class="line">  &lt;a href=<span class="string">""</span> class=<span class="string">"resource-item"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"resource-item-top resource-item-top-two"</span>&gt;</span><br><span class="line">        &lt;div</span><br><span class="line">        id=<span class="string">"bm"</span></span><br><span class="line">        class=<span class="string">"bodymovin"</span></span><br><span class="line">        data-movpath=<span class="string">"js/compass.json"</span>&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div class=<span class="string">"resource-item-bottom"</span>&gt;</span><br><span class="line">      &lt;h5&gt;教程&lt;/h5&gt;</span><br><span class="line">      &lt;p&gt;教程是入门的捷径，请从这里开始了解San&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>这是结构 具体样式可以查看我的github文件 <a href="https://github.com/xiaotiandada/Case/tree/master/Anime" target="_blank" rel="noopener">传送门</a></p>
+<p>然后就是js 控制动画效果了</p>
+<p>引入jquery (方便～)</p>
+<ul>
+<li>在github上的build/player获取最新版本的lottie.js文件 或者 从AE的插件导出</li>
+<li><p>在HTML引入文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"js/lottie.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用lottie.loadAnimation()启动一个动画。将一个对象作为参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var animData = &#123;</span><br><span class="line">  container: bodymovinLayer,</span><br><span class="line">  renderer: <span class="string">'svg'</span>,</span><br><span class="line">  prerender: <span class="literal">true</span>,</span><br><span class="line">  loop: <span class="literal">false</span>,</span><br><span class="line">  autoplay: <span class="literal">false</span>,</span><br><span class="line">  path: bodymovinLayer.getAttribute(<span class="string">'data-movpath'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># animData 导出的动画数据的Object</span></span><br><span class="line"><span class="comment"># container 渲染动画的dom元素</span></span><br><span class="line"><span class="comment"># renderer 'svg'/'canvas'/'html'来设置渲染器</span></span><br><span class="line"><span class="comment"># prerender 这个根据英文应该是预渲染</span></span><br><span class="line"><span class="comment"># loop 是否循环播放</span></span><br><span class="line"><span class="comment"># autoplay 是否自动播放</span></span><br><span class="line"><span class="comment"># path 路径</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>while循环绑定事件 将上面封装进一个方法</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">setBodymovin = <span class="keyword">function</span> (cards, len) &#123;</span><br><span class="line">  <span class="keyword">while</span> (len--) &#123;</span><br><span class="line">    var bodymovinLayer = cards[len].getElementsByClassName(<span class="string">'bodymovin'</span>)[0]</span><br><span class="line"></span><br><span class="line">    var animData = &#123;</span><br><span class="line">      container: bodymovinLayer,</span><br><span class="line">      renderer: <span class="string">'svg'</span>,</span><br><span class="line">      prerender: <span class="literal">true</span>,</span><br><span class="line">      loop: <span class="literal">false</span>,</span><br><span class="line">      autoplay: <span class="literal">false</span>,</span><br><span class="line">      path: bodymovinLayer.getAttribute(<span class="string">'data-movpath'</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    anim = lottie.loadAnimation(animData);</span><br><span class="line"></span><br><span class="line">    (<span class="keyword">function</span> (anim) &#123;</span><br><span class="line">      var card = cards[len]</span><br><span class="line"></span><br><span class="line">      $(card).on(<span class="string">'mouseenter'</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        anim.play()</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">      $(card).on(<span class="string">'mouseleave'</span>, <span class="keyword">function</span> (e) &#123;</span><br><span class="line">        anim.stop()</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)(anim)</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>最后获取元素调用<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var resourceCards = document.querySelectorAll(<span class="string">'.resource-block'</span>)</span><br><span class="line">var facilityCards = document.querySelectorAll(<span class="string">'.facility-block'</span>)</span><br><span class="line">var len = resourceCards.length</span><br><span class="line"></span><br><span class="line">setBodymovin(resourceCards, len)</span><br><span class="line">setBodymovin(facilityCards, len)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>最后贴 gulp 任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">const gulp = require(<span class="string">'gulp'</span>)</span><br><span class="line">const connect = require(<span class="string">'gulp-connect'</span>)</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'connect'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  connect.server(&#123;</span><br><span class="line">    root: <span class="string">'app'</span>,</span><br><span class="line">    port: 8000,</span><br><span class="line">    livereload: <span class="literal">true</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'html'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  gulp.src(<span class="string">'./app/*.html'</span>)</span><br><span class="line">    .pipe(connect.reload())</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'css'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  gulp.src(<span class="string">'./app/css/*.css'</span>)</span><br><span class="line">    .pipe(connect.reload())</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'watch'</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  gulp.watch([<span class="string">'./app/*.html'</span>], [<span class="string">'html'</span>])</span><br><span class="line">  gulp.watch([<span class="string">'./app/css/*.css'</span>], [<span class="string">'css'</span>])</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'connect'</span>,<span class="string">'watch'</span>])</span><br></pre></td></tr></table></figure>
+<p>具体代码见github源码</p>
+<p>大佬多给给意见哦～～～</p>
+<p>Qq： 952822399</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://xiaotiandada.github.io/2018/05/17/数据结构与算法JavaScript描述二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1269,7 +1433,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
