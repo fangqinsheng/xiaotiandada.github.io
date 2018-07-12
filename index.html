@@ -236,6 +236,139 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xiaotiandada.github.io/2018/07/13/设置相同宽的textarea和select是一样宽的吗？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小田">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/24250627?s=400&u=3aef13d0b582adab9a4e95ef51607ad1ab2c845f&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小田的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/13/设置相同宽的textarea和select是一样宽的吗？/" itemprop="url">设置相同宽的textarea和select是一样宽的吗？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T01:02:56+08:00">
+                2018-07-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>是不是一样的 搞一搞就知道了～</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">class</span>=<span class="string">"textarea"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">cols</span>=<span class="string">""</span> <span class="attr">rows</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"select"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"a"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"b"</span>&gt;</span>b<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"c"</span>&gt;</span>c<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"d"</span>&gt;</span>d<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.textarea</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.select</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>如果在重置border的情况下 设置textarea 和 select的宽度为50px 那么他的宽度是不一样的</p>
+</li>
+<li><p>在测试textarea中 发现textarea宽度为50px 的时候 总宽度为50加上默认的border 1px 就是52px</p>
+</li>
+<li><p>而select在宽度为50px的时候 总宽度为50px 内容减去border 1px 之和后还剩余48px</p>
+</li>
+</ul>
+<p>所以不知道的地方 搞一搞就知道了！hhhh</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://xiaotiandada.github.io/2018/07/06/用vue做一个简单的登录流程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1539,172 +1672,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xiaotiandada.github.io/2018/06/06/vue-lottie动画效果/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小田">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/24250627?s=400&u=3aef13d0b582adab9a4e95ef51607ad1ab2c845f&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小田的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/06/vue-lottie动画效果/" itemprop="url">vue-lottie动画效果</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-06T18:45:38+08:00">
-                2018-06-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="vue-lottie动画效果"><a href="#vue-lottie动画效果" class="headerlink" title="vue-lottie动画效果"></a>vue-lottie动画效果</h3><p>之前用lottie模仿过san官网的动画效果(没有打广告QAQ)</p>
-<p><a href="https://github.com/xiaotiandada/Case/tree/master/Anime/sanDemo" target="_blank" rel="noopener">仓库地址</a></p>
-<p><a href="https://xiaotiandada.github.io/Case/Anime/sanDemo/app/">模仿demo</a></p>
-<p><a href="https://xiaotiandada.github.io/">blog</a></p>
-<p><a href="https://juejin.im/post/5aff09ee6fb9a07a9b36365b" target="_blank" rel="noopener">掘金</a></p>
-<p>用lottie的好处有很多(…….此处省略ｎ字) 简单来说就是简单高效的还原设计的动画效果</p>
-<p>然后在个人项目使用vue-lottie　分享一些小小经验吧</p>
-<p>废话不多说～～～ (正经分割线)</p>
-<hr>
-<h3 id="分析官方demo"><a href="#分析官方demo" class="headerlink" title="分析官方demo"></a>分析官方demo</h3><p>先来一个简单的尝尝鲜</p>
-<p><a href="https://github.com/chenqingspring/vue-lottie" target="_blank" rel="noopener">vue-lottie仓库</a></p>
-<p><a href="https://chenqingspring.github.io/vue-lottie/" target="_blank" rel="noopener">vue-lottie demo</a></p>
-<p>打开仓库可以看见很多很棒的效果（nice</p>
-<h4 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save vue-lottie</span><br></pre></td></tr></table></figure>
-<h4 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">        &lt;lottie :options=<span class="string">"defaultOptions"</span> :height=<span class="string">"400"</span> :width=<span class="string">"400"</span> v-on:animCreated=<span class="string">"handleAnimation"</span>/&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;p&gt;Speed: x&#123;&#123;animationSpeed&#125;&#125;&lt;/p&gt;</span><br><span class="line">            &lt;input <span class="built_in">type</span>=<span class="string">"range"</span> value=<span class="string">"1"</span> min=<span class="string">"0"</span> max=<span class="string">"3"</span> step=<span class="string">"0.5"</span></span><br><span class="line">                   v-on:change=<span class="string">"onSpeedChange"</span> v-model=<span class="string">"animationSpeed"</span>&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;button v-on:click=<span class="string">"stop"</span>&gt;stop&lt;/button&gt;</span><br><span class="line">        &lt;button v-on:click=<span class="string">"pause"</span>&gt;pause&lt;/button&gt;</span><br><span class="line">        &lt;button v-on:click=<span class="string">"play"</span>&gt;play&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import Lottie from <span class="string">'./lottie.vue'</span>;</span><br><span class="line">  import * as animationData from <span class="string">'./assets/pinjump.json'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">export</span> default &#123;</span><br><span class="line">    name: <span class="string">'app'</span>,</span><br><span class="line">    components: &#123;</span><br><span class="line">      <span class="string">'lottie'</span>: Lottie</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">      <span class="built_in">return</span> &#123;</span><br><span class="line">        defaultOptions: &#123;animationData: animationData&#125;,</span><br><span class="line">        animationSpeed: 1</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">      handleAnimation: <span class="keyword">function</span> (anim) &#123;</span><br><span class="line">        this.anim = anim;</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">      stop: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        this.anim.stop();</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">      play: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        this.anim.play();</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">      pause: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        this.anim.pause();</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">      onSpeedChange: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        this.anim.setSpeed(this.animationSpeed);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>这是之前官方给的demo代码　基本上和平时使用没啥不一样(所以只需要复制粘贴就ok了)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># json 动画效果AE转json后的文件</span></span><br><span class="line">import * as animationData from <span class="string">'./assets/pinjump.json'</span>;</span><br></pre></td></tr></table></figure>
-<p>引入的json需要改！！！</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里引入了　lottie组件</span></span><br><span class="line">import Lottie from <span class="string">'./lottie.vue'</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># lottie.vue</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div :style=<span class="string">"style"</span> ref=<span class="string">"lavContainer"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import lottie from <span class="string">'lottie-web'</span></span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">    props: &#123;</span><br><span class="line">      options: &#123;</span><br><span class="line">        <span class="built_in">type</span>: Object,</span><br><span class="line">        required: <span class="literal">true</span></span><br><span class="line">      &#125;,</span><br><span class="line">      height: Number,</span><br><span class="line">      width: Number</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">      <span class="built_in">return</span> &#123;</span><br><span class="line">        style: &#123;</span><br><span class="line">          width: this.width ? `<span class="variable">$&#123;this.width&#125;</span>px` : <span class="string">'100%'</span>,</span><br><span class="line">          height: this.height ? `<span class="variable">$&#123;this.height&#125;</span>px` : <span class="string">'100%'</span>,</span><br><span class="line">          overflow: <span class="string">'hidden'</span>,</span><br><span class="line">          margin: <span class="string">'0 auto'</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">mounted</span></span>() &#123;</span><br><span class="line">      this.anim = lottie.loadAnimation(&#123;</span><br><span class="line">        container: this.<span class="variable">$refs</span>.lavContainer,</span><br><span class="line">        renderer: <span class="string">'svg'</span>,</span><br><span class="line">        loop: this.options.loop !== <span class="literal">false</span>,</span><br><span class="line">        autoplay: this.options.autoplay !== <span class="literal">false</span>,</span><br><span class="line">        animationData: this.options.animationData,</span><br><span class="line">        rendererSettings: this.options.rendererSettings</span><br><span class="line">      &#125;</span><br><span class="line">      )</span><br><span class="line">      this.<span class="variable">$emit</span>(<span class="string">'animCreated'</span>, this.anim)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>然后会发现还是有错误(缺少组件！)　其实很简单啦，打开仓库进入src然后打开lottle组件然后复制过去就ok啦hhh(简单)</p>
-<p><img src="/2018/06/06/vue-lottie动画效果/one.png" alt="效果图"></p>
-<p>这是效果图（是不是很简单２３３</p>
-<h3 id="使用别的json文件"><a href="#使用别的json文件" class="headerlink" title="使用别的json文件"></a>使用别的json文件</h3><p>官方给给了一个很好的效果网站　<a href="https://www.lottiefiles.com/" target="_blank" rel="noopener">地址</a></p>
-<p>下载json文件　然后更换引入的json</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># json 动画效果AE转json后的文件</span></span><br><span class="line">import * as animationData from <span class="string">'./assets/blood_transfusion_kawaii.json.json'</span>;</span><br></pre></td></tr></table></figure>
-<p><img src="/2018/06/06/vue-lottie动画效果/two.png" alt="效果图"></p>
-<p>是不是也很简单！！！</p>
-<h3 id="使用vue-lottie模仿san官网的动画效果"><a href="#使用vue-lottie模仿san官网的动画效果" class="headerlink" title="使用vue-lottie模仿san官网的动画效果"></a>使用vue-lottie模仿san官网的动画效果</h3><p>先来效果图～～～</p>
-<p><img src="/2018/06/06/vue-lottie动画效果/three.png" alt="效果图"></p>
-<p>因为有多个需要用到lottie动画，想了半天不知道怎么解决调用方法的问题　最后想了一个简单的方法</p>
-<p>直接将每一个动画抽到一个组件　组件内依然用之前的方法（稍微改造一下就行</p>
-<p>然后利用父子组件传数据的形式传递json文件　子组件props接收</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=<span class="string">"card-panel"</span> @mouseenter=<span class="string">"lottiePlay"</span> @mouseleave=<span class="string">"lottieStop"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"card-panel-icon-wrapper icon-shoppingCard"</span>&gt;</span><br><span class="line">      &lt;lottie :options=<span class="string">"defaultOptions"</span> :height=<span class="string">"80"</span> :width=<span class="string">"80"</span> v-on:animCreated=<span class="string">"handleAnimation"</span> /&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"card-panel-description"</span>&gt;</span><br><span class="line">      &lt;div class=<span class="string">"card-panel-text"</span>&gt;今日活跃&lt;/div&gt;</span><br><span class="line">      &lt;div class=<span class="string">"card-panel-num"</span>&gt;2600&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># props</span></span><br><span class="line">props: &#123;</span><br><span class="line">    animationDataPath: &#123;</span><br><span class="line">      <span class="built_in">type</span>: Object,</span><br><span class="line">      default: null</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">  <span class="built_in">return</span> &#123;</span><br><span class="line">    defaultOptions: &#123;</span><br><span class="line">      // animationData: animationDataPath,</span><br><span class="line">      animationData: this.animationDataPath,</span><br><span class="line">      autoplay: <span class="literal">false</span>,  <span class="comment"># 不自动播放</span></span><br><span class="line">      loop: <span class="literal">false</span>　　　　　<span class="comment"># 不循环</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 事件调用</span></span><br><span class="line">@mouseenter=<span class="string">"lottiePlay"</span> @mouseleave=<span class="string">"lottieStop"</span></span><br><span class="line"></span><br><span class="line">lottiePlay: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  this.anim.play()</span><br><span class="line">&#125;,</span><br><span class="line">lottieStop: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  this.anim.stop()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然后就到了父组件传数据</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 父组件</span></span><br><span class="line">&lt;panel-lottie :animationDataPath=<span class="string">"animationDataPathOne"</span>&gt;&lt;/panel-lottie&gt;</span><br><span class="line"></span><br><span class="line">animationDataPathOne: require(<span class="string">'../../../public/json/compass.json'</span>)</span><br></pre></td></tr></table></figure>
-<p>自己用到了require引入json　然后打包出来　一样可以正常运行　如果大家有很好的方法可以教我！我好学习学习</p>
-<hr>
-<p>emmmmm　大概就是这么多吧～</p>
-<p>如果实在需要这个的源码可以打开我的github仓库　由于项目还是一个半成品　所以地址就放在最后面了</p>
-<p><a href="https://github.com/xiaotiandada/My-music/tree/master/client/src/views/admin/About" target="_blank" rel="noopener">vue-lottie源码</a></p>
-<p><a href="https://github.com/xiaotiandada/My-music" target="_blank" rel="noopener">项目地址</a></p>
-<blockquote>
-<p>如果大家觉得不错的话　可以点star哦（厚脸皮２３３</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1759,7 +1726,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
