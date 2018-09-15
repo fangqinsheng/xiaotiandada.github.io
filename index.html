@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans,fr-FR,h-hk,zh-tw,ru,en,default">
+<html class="theme-next gemini use-motion" lang="zh-Hans,fr-FR,h-hk,zh-tw,ru,en,default">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -78,6 +78,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="小田的博客" type="application/atom+xml" />
+
 
 
 
@@ -100,7 +102,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -194,6 +196,36 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -205,9 +237,43 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -306,59 +372,18 @@
 
       
         
-          
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>首先说说为什么自己会想着写一个小程序emmmmmm 感觉没有为什么 就是想写了 我就干了~~~hhhhh</p>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>首先说说为什么自己会想着写一个小程序emmmmmm 感觉没有为什么 就是想写了 我就干了~~~hhhhh</p>
 <p>我就粗略看了一下小程序的官方文档和mpvue的文档 然后就开撸了。 </p>
 <p><a href="https://github.com/xiaotiandada/takeaway" target="_blank" rel="noopener">项目仓库</a> 欢迎start和pr哦~~</p>
 <p>为了节省大家的宝贵时间，不废话 直接进入正题；</p>
 <hr>
-<h1 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h1><h2 id="mpvue"><a href="#mpvue" class="headerlink" title="mpvue"></a>mpvue</h2><p><a href="http://mpvue.com/" target="_blank" rel="noopener">mpvue</a> 是一个使用 Vue.js 开发小程序的前端框架。框架基于 Vue.js……(可以看官网介绍~).</p>
-<h2 id="iview-weapp"><a href="#iview-weapp" class="headerlink" title="iview weapp"></a>iview weapp</h2><p><a href="https://weapp.iviewui.com/" target="_blank" rel="noopener">iview weapp </a> 一套高质量的<br>微信小程序 UI 组件库.</p>
-<h1 id="界面展示"><a href="#界面展示" class="headerlink" title="界面展示"></a>界面展示</h1><p><img src="/2018/09/09/mpvue外卖小程序/mpvue1.png" alt="mpvue"><br><img src="/2018/09/09/mpvue外卖小程序/mpvue2.png" alt="mpvue"><br><img src="/2018/09/09/mpvue外卖小程序/mpvue3.png" alt="mpvue"><br><img src="/2018/09/09/mpvue外卖小程序/mpvue4.png" alt="mpvue"><br><img src="/2018/09/09/mpvue外卖小程序/mpvue5.png" alt="mpvue"></p>
-<p>大概的界面就是这样(界面是模仿得饿了么 我也只会模仿点页面了hhhhh)</p>
-<h1 id="完成进度"><a href="#完成进度" class="headerlink" title="完成进度"></a>完成进度</h1><ul>
-<li style="list-style: none"><input type="checkbox" checked> 小程序的基本界面展示</li>
-<li style="list-style: none"><input type="checkbox" checked> 简单的购买流程</li>
-<li style="list-style: none"><input type="checkbox" checked> 使用全局状态保存部分数据</li>
-<li style="list-style: none"><input type="checkbox" checked> 使用Fly请求数据</li>
-<li style="list-style: none"><input type="checkbox" checked> 使用Easy-mock模拟数据</li>
-<li style="list-style: none"><input type="checkbox" checked> ……</li>
-<li style="list-style: none"><input type="checkbox"> 没有数据库保存真实数据</li>
-<li style="list-style: none"><input type="checkbox"> 没有根据多个数据渲染店和商品</li>
-<li style="list-style: none"><input type="checkbox"> 没有做添加地址的数据校验等</li>
-<li style="list-style: none"><input type="checkbox"> 订单页面还需要优化 折叠显示等</li>
-<li style="list-style: none"><input type="checkbox"> 商家端还未开发</li>
-<li style="list-style: none"><input type="checkbox"> ……</li>
-</ul>
-<p>其实还有很多功能没写，因为这是刚开始上班没事做的时候撸的(所以兴趣才是最好的老师)，然后现在事情比较忙就可能先放下了 如果有大佬或者有时间的大佬可以帮忙完善或者pr emmm  你直接拿走再写也是可以的~</p>
-<h1 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h1><p>技术实现过程和一些踩过的坑</p>
-<h2 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h2><p>界面主要使用 iview weapp 组件库 然后 有一些组件库没有的自己原生写法来撸，这里还好没啥坑 但是在布局上面似乎有一个1px的问题 我好像没处理 不知道哪位大佬能发现 并且教我怎么解决~~ 单位主要使用小程序的rpx(很好用) 只需要根据iPhone6的尺寸来使用就可以了，详情可以看<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html" target="_blank" rel="noopener">官方文档</a>.</p>
-<p>iview weapp input 似乎不能使用双向数据绑定，需要自己重新撸.</p>
-<p>底部的tabBar我是用的json来配置的 省得自己写 方便</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">tabBar: &#123;</span><br><span class="line">      color: '#6f6f6f',</span><br><span class="line">      selectedColor: '#18a3ff',</span><br><span class="line">      backgroundColor: '#ffffff',</span><br><span class="line">      borderStyle: 'black',</span><br><span class="line">      list: [</span><br><span class="line">        &#123;</span><br><span class="line">          pagePath: 'pages/index/main',</span><br><span class="line">          iconPath: 'static/img/wm.png',</span><br><span class="line">          selectedIconPath: 'static/img/wms.png',</span><br><span class="line">          text: '外卖'</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          pagePath: 'pages/order/main',</span><br><span class="line">          iconPath: 'static/img/dd.png',</span><br><span class="line">          selectedIconPath: 'static/img/dds.png',</span><br><span class="line">          text: '订单'</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          pagePath: 'pages/shopp/main',</span><br><span class="line">          iconPath: 'static/img/tj1.png',</span><br><span class="line">          selectedIconPath: 'static/img/tj1s.png',</span><br><span class="line">          text: '推荐'</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          pagePath: 'pages/user/main',</span><br><span class="line">          iconPath: 'static/img/user.png',</span><br><span class="line">          selectedIconPath: 'static/img/users.png',</span><br><span class="line">          text: '我的'</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>这块的话可能需要大家查看小程序的文档来配置，其实也简单 跟玩一样就配置的非常好看</p>
-<p>可能最麻烦的也是很简单的一个坑 如何引入 其实iview weapp 官方文档写的很清楚了 但是只是大家不知道这么配置而已 我来扣个代码演示一下.</p>
-<p>到 GitHub 下载 iView Weapp 的代码，将 dist 目录拷贝到自己的项目中。然后按照如下的方式使用组件，以 Button 为例，其它组件在对应的文档页查看：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1. 添加需要的组件 在页面的 json 中配置（路径根据自己项目位置配置）</span><br><span class="line">// 添加 config json</span><br><span class="line">export default &#123;</span><br><span class="line">  config: &#123;</span><br><span class="line">    // 这儿添加要用的小程序组件</span><br><span class="line">    usingComponents: &#123;</span><br><span class="line">      'i-button': '../../dist/button/index'</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2. 在 wxml 中使用组件</span><br><span class="line"><span class="tag">&lt;<span class="name">i-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> <span class="attr">bind:click</span>=<span class="string">"handleClick"</span>&gt;</span>这是一个按钮<span class="tag">&lt;/<span class="name">i-button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>是不是很简单！！！ 没看明白的也可以看我的<a href="https://github.com/xiaotiandada/takeaway" target="_blank" rel="noopener">github</a>仓库哦~</p>
-<p>界面这块大概就是这么多 也可能我写掉了 后续想起来我会更一下的hhhh(懒)</p>
-<h2 id="mpvue-1"><a href="#mpvue-1" class="headerlink" title="mpvue"></a>mpvue</h2><p>mpvue 新建页面需要重新 npm run dev 这个官方文档已经明确说明过了，由于一个页面只用重启一次 问题不大。</p>
-<p>小程序的请求似乎不能用axios 所以使用了Fly 来代替，至于为什么 可以看github里面的<a href="https://github.com/Meituan-Dianping/mpvue/issues/109" target="_blank" rel="noopener">issues</a></p>
-<p>mpvue 支持小程序和vuejs的事件 详情可以<a href="http://mpvue.com/mpvue/#_13" target="_blank" rel="noopener">查看文档</a></p>
-<p>然后可能最坑的就是页面转跳了吧… 其实官方文档有写 <a href="https://developers.weixin.qq.com/miniprogram/dev/api/ui-navigate.html#wxnavigatetoobject" target="_blank" rel="noopener">目前页面路径最多只能十层。</a> 比如说我再添加地址的时候 使用了wx.navigateTo(OBJECT) 然后返回到地址的列表页面然后继续重复添加地址 到达一定的数量之后 就不会再跳转，而且返回的也是之前重复的页面 用户体验很不好 所以需要一个解决的办法。文字太多可能看不懂 我来画个图。</p>
-<p><img src="/2018/09/09/mpvue外卖小程序/mpvue6.png" alt="mpvue"></p>
-<p>关于登录一块的话 我没有做什么处理 直接用新的用户信息接口就可以了</p>
-<p><a href="https://developers.weixin.qq.com/blogdetail?action=get_post_info&amp;lang=zh_CN&amp;token=1894828834&amp;docid=0000a26e1aca6012e896a517556c01&amp;idescene=6&amp;devtools=1&amp;idescene=6" target="_blank" rel="noopener">小程序与小游戏获取用户信息接口调整</a></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">open-data</span> <span class="attr">type</span>=<span class="string">"groupName"</span> <span class="attr">open-gid</span>=<span class="string">"xxxxxx"</span>&gt;</span><span class="tag">&lt;/<span class="name">open-data</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">open-data</span> <span class="attr">type</span>=<span class="string">"userAvatarUrl"</span>&gt;</span><span class="tag">&lt;/<span class="name">open-data</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">open-data</span> <span class="attr">type</span>=<span class="string">"userGender"</span> <span class="attr">lang</span>=<span class="string">"zh_CN"</span>&gt;</span><span class="tag">&lt;/<span class="name">open-data</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这样一总结下来感觉自己似乎没写多少功能Orz！！！</p>
-<p>但是这篇文章可能是我写的文字最多的一篇了 如果大家觉得还不错的话可以点个喜欢哦~~ 蟹蟹o(∩_∩)o 哈哈</p>
-<p>所以回到标题，兴趣才是最好的老师，接下面准备玩一玩electron-vue…..</p>
-<p>写得好累，介绍的不多 可能有遗漏 但是大部分的核心基本上都已经说了，如果大佬们想找我交流的 ，可以加我QQ github 邮箱 都ojbk的</p>
-<p>Qq：952822399 就留QQ吧 手指酸了emmmmm~~~~ 告辞 溜</p>
-<p>新开了个Qq群，大家也可以进来互相交流~ iD 718639024</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/09/mpvue外卖小程序/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -475,69 +500,15 @@
 
       
         
-          
-            <p>首先庆祝<a href="https://baike.baidu.com/item/%E5%85%AB%E4%B8%80%E5%BB%BA%E5%86%9B%E8%8A%82/512834?fr=aladdin" target="_blank" rel="noopener">八一建军节</a> hhhh 很皮了~~</p>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>首先庆祝<a href="https://baike.baidu.com/item/%E5%85%AB%E4%B8%80%E5%BB%BA%E5%86%9B%E8%8A%82/512834?fr=aladdin" target="_blank" rel="noopener">八一建军节</a> hhhh 很皮了~~</p>
 <p>文章内容如标题一样很绵薄ヽ(✿ﾟ▽ﾟ)ノemmm~~~</p>
-<p>使用 花裤衩(PanJiaChen) vue-element-admin </p>
-<p>发现用户登录界面 使用Chrome浏览器记住密码时候 </p>
-<p>发现大佬处理的input标签背景变黄的颜色值 </p>
-<p>有辣么一丝丝不协调 于是去GitHub上面提了issues</p>
-<p>然后大佬回复了 还叫我去pr 于是很激动的第一次去pr</p>
-<p>然后分享一下自己的感受和pr流程  </p>
-<p>我使用的GitHub Desktop 工具  大家理解操作就行</p>
-<blockquote>
-<p>(↓↓↓↓↓分割线↓↓↓↓↓)</p>
-</blockquote>
-<hr>
-<ul>
-<li>fork 你想贡献的项目</li>
-</ul>
-<p><img src="/2018/08/01/为开源社区贡献绵薄之力/1.png" alt="img"></p>
-<ul>
-<li>然后去自己的仓库 clone 这个项目</li>
-</ul>
-<p><img src="/2018/08/01/为开源社区贡献绵薄之力/2.png" alt="img"></p>
-<ul>
-<li>新建分支 (最好注意命名规范！！！)</li>
-</ul>
-<p><img src="/2018/08/01/为开源社区贡献绵薄之力/3.png" alt="img"></p>
-<p><img src="/2018/08/01/为开源社区贡献绵薄之力/4.png" alt="img"></p>
-<ul>
-<li><p>然后在你新建的分支上修改</p>
-</li>
-<li><p>然后提交commit 最好描述清晰 做了什么修改之类的</p>
-</li>
-</ul>
-<p><img src="/2018/08/01/为开源社区贡献绵薄之力/7.png" alt="img"></p>
-<ul>
-<li>修改完成之后 push 上去</li>
-</ul>
-<p><img src="/2018/08/01/为开源社区贡献绵薄之力/5.png" alt="img"></p>
-<ul>
-<li>在你自己的仓库查看fork项目</li>
-</ul>
-<ul>
-<li>然后有提示你是否 pull requests(绿色的按钮 然后单击干掉它)</li>
-</ul>
-<p><img src="/2018/08/01/为开源社区贡献绵薄之力/6.png" alt="img"></p>
-<ul>
-<li><p>耐心等待管理员的处理(反馈 评论 等等之类的)</p>
-</li>
-<li><p>管理员 merge 之后(成果在下面(〃∀〃)~~)</p>
-</li>
-</ul>
-<p><img src="/2018/08/01/为开源社区贡献绵薄之力/8.png" alt="img"></p>
-<blockquote>
-<p>(↓↓↓↓↓分割线↓↓↓↓↓)</p>
-</blockquote>
-<hr>
-<p>其实步骤真的没多少，这篇文章主要是分享 向社区贡献代码的感受 没什么技术含量~</p>
-<p>总的来说 第一次pr 很激动 很开心 2333~</p>
-<p>所以写篇文章分享分享(pei 真不要皮~~~)</p>
-<p>如果大佬们有心思可以去看看 我贡献的真的很绵薄！！！</p>
-<p>所以大家一起多贡献自己的绵薄之力 这样社区才会更美好(故障(〃∀〃)~~)</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/01/为开源社区贡献绵薄之力/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -654,23 +625,16 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p>是不是一样的 搞一搞就知道了～</p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">class</span>=<span class="string">"textarea"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">cols</span>=<span class="string">""</span> <span class="attr">rows</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"select"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"a"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"b"</span>&gt;</span>b<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"c"</span>&gt;</span>c<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"d"</span>&gt;</span>d<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.textarea</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.select</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>如果在重置border的情况下 设置textarea 和 select的宽度为50px 那么他的宽度是不一样的</p>
-</li>
-<li><p>在测试textarea中 发现textarea宽度为50px 的时候 总宽度为50加上默认的border 1px 就是52px</p>
-</li>
-<li><p>而select在宽度为50px的时候 总宽度为50px 内容减去border 1px 之和后还剩余48px</p>
-</li>
-</ul>
-<p>所以不知道的地方 搞一搞就知道了！hhhh</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/13/设置相同宽的textarea和select是一样宽的吗？/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -787,8 +751,7 @@
 
       
         
-          
-            <h1 id="vue-login"><a href="#vue-login" class="headerlink" title="vue-login"></a>vue-login</h1><blockquote>
+          <h1 id="vue-login"><a href="#vue-login" class="headerlink" title="vue-login"></a>vue-login</h1><blockquote>
 <p>一个简单的登录界面及登录流程</p>
 </blockquote>
 <ul>
@@ -798,21 +761,13 @@
 </ul>
 <p>用vue和element登录界面，easy-mock模拟数据</p>
 <p><img src="https://github.com/xiaotiandada/vue-login/raw/master/client.png" alt="img"></p>
-<ol>
-<li>用axios发送post请求返回数据，根据返回的数据判断是否登录成功</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> axios.create(&#123;</span><br><span class="line">    baseURL: <span class="string">'https://www.easy-mock.com'</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Api <span class="keyword">from</span> <span class="string">'@/services/Api.js'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  userLogin(parameter) &#123;</span><br><span class="line">    <span class="keyword">return</span> Api().post(<span class="string">'/userlogin'</span>, parameter)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = &#123;</span><br><span class="line">    userName: <span class="keyword">this</span>.ruleForm2.userName,</span><br><span class="line">    pass: <span class="keyword">this</span>.ruleForm2.pass</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">UserLogin.userLogin(data)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response)</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>如果登录成功加入全局状态store，后台界面根据全局状态判断是否登录,利用vuex-persistedstate保持全局状态</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">_this.$store.dispatch(<span class="string">'setToken'</span>, data.result.token)</span><br><span class="line">_this.$store.dispatch(<span class="string">'setUserName'</span>, data.result.userName)</span><br><span class="line">_this.$router.push(&#123; <span class="attr">name</span>: <span class="string">'Admin'</span> &#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果全局状态isUserLoggedIn为false,则返回登录界面</p>
-</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">loggedIn: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">this</span>.isUserLoggedIn) &#123;</span><br><span class="line">        <span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">            name: <span class="string">'Login'</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/06/用vue做一个简单的登录流程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -929,8 +884,7 @@
 
       
         
-          
-            <h1 id="把AE动画转换成Web原生动画"><a href="#把AE动画转换成Web原生动画" class="headerlink" title="把AE动画转换成Web原生动画"></a>把AE动画转换成Web原生动画</h1><blockquote>
+          <h1 id="把AE动画转换成Web原生动画"><a href="#把AE动画转换成Web原生动画" class="headerlink" title="把AE动画转换成Web原生动画"></a>把AE动画转换成Web原生动画</h1><blockquote>
 <p>先贴效果图</p>
 <p><a href="https://xiaotiandada.github.io/ife/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.8/">预览地址 pc 端食用更佳</a></p>
 <p><a href="https://juejin.im/post/5aff09ee6fb9a07a9b36365b" target="_blank" rel="noopener">模仿san官网效果文章地址</a></p>
@@ -941,25 +895,13 @@
 <blockquote>
 <p>右边这个动画会一直动 在firefox可以直接打开 其他浏览器需要服务环境</p>
 <h2 id="正经分割线"><a href="#正经分割线" class="headerlink" title="正经分割线"></a>正经分割线</h2></blockquote>
-<ul>
-<li><a href="http://ife.baidu.com/course/detail/id/35?t=1529985511134#learn" target="_blank" rel="noopener">ife</a></li>
-<li><a href="http://vis.baidu.com/" target="_blank" rel="noopener">官网效果</a></li>
-<li><a href="https://github.com/xiaotiandada/ife" target="_blank" rel="noopener">仓库地址</a></li>
-<li><a href="https://xiaotiandada.github.io/">lottie库</a><br><a href="https://github.com/airbnb/lottie-web" target="_blank" rel="noopener">https://github.com/airbnb/lottie-web</a></li>
-<li><a href="https://xiaotiandada.github.io/">博客地址</a></li>
-</ul>
-<p>大家其实看第一个就知道怎么弄了 这个我之前写过一个vue-lottie 的时候说过类似的实现方法</p>
-<p><a href="https://juejin.im/post/5b180a706fb9a01e780a49d4" target="_blank" rel="noopener">文章地址</a></p>
-<hr>
-<h2 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"home-banner"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"home-banner-left"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">b</span>&gt;</span>ECharts<span class="tag">&lt;/<span class="name">b</span>&gt;</span>数据可视化实验室<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>由百度 ECharts 团队创建，联合公司内外众多数据可视化从业人组成的技术研究虚拟组织，致力于数据可视化的相关研究、教育普及、产品研发及生态建设。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"home-banner-right"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"bm"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="页面样式"><a href="#页面样式" class="headerlink" title="页面样式"></a>页面样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">*,</span><br><span class="line">*<span class="selector-pseudo">::after</span>,</span><br><span class="line">*<span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#102131</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.home-banner</span> &#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">1130px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">8%</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.home-banner-left</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">54%</span>;</span><br><span class="line">    <span class="attribute">vertical-align</span>: top;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.home-banner-left</span> <span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">48px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">62px</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">800</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.home-banner-left</span> <span class="selector-tag">h1</span> <span class="selector-tag">b</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">53px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.home-banner-left</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgba</span>(255, 255, 255, .7);</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">47px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">200</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">letter-spacing</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.home-banner-right</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">62%</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">8%</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: -<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">vertical-align</span>: top;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#bm</span> &#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">700px</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">768px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.home-banner</span> &#123;</span><br><span class="line">        <span class="attribute">padding-top</span>: <span class="number">2%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.home-banner-left</span> &#123;</span><br><span class="line">        <span class="attribute">text-align</span>: center;</span><br><span class="line">        <span class="attribute">display</span>: block;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">        <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">20px</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.home-banner-right</span> &#123;</span><br><span class="line">        <span class="attribute">display</span>: block;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">`</span><br></pre></td></tr></table></figure>
-<h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"./lottie.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> animation = lottie.loadAnimation(&#123;</span><br><span class="line">        container: <span class="built_in">document</span>.getElementById(<span class="string">'bm'</span>), <span class="comment">// the dom element that will contain the animation</span></span><br><span class="line">        renderer: <span class="string">'svg'</span>,</span><br><span class="line">        loop: <span class="literal">true</span>,</span><br><span class="line">        autoplay: <span class="literal">true</span>,</span><br><span class="line">        path: <span class="string">'test.json'</span> <span class="comment">// the path to the animation json</span></span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>其实这里复制粘贴就好了2333</p>
-<p><a href="https://xiaotiandada.github.io/ife/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.8/">预览地址 pc 端食用更佳</a></p>
-<p>ife No.8下面还有一个模仿san官网效果的 结果发现之前已经模仿了2333机缘啊哈哈哈</p>
-<p><a href="https://juejin.im/post/5aff09ee6fb9a07a9b36365b" target="_blank" rel="noopener">模仿san官网效果文章地址</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/26/把AE动画转换成Web原生动画/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1076,20 +1018,19 @@
 
       
         
-          
-            <h1 id="使用-animate-css-实现一个优雅的登录框"><a href="#使用-animate-css-实现一个优雅的登录框" class="headerlink" title="使用 animate.css 实现一个优雅的登录框"></a>使用 animate.css 实现一个优雅的登录框</h1><blockquote>
+          <h1 id="使用-animate-css-实现一个优雅的登录框"><a href="#使用-animate-css-实现一个优雅的登录框" class="headerlink" title="使用 animate.css 实现一个优雅的登录框"></a>使用 animate.css 实现一个优雅的登录框</h1><blockquote>
 <p><a href="http://ife.baidu.com/course/detail/id/34" target="_blank" rel="noopener">资料地址</a></p>
 <p><a href="https://xiaotiandada.github.io/ife/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.7/">预览地址</a></p>
 <p>下面的动画效果 css 样式是从 animate.css里面扣出来的2333</p>
 </blockquote>
 <p><img src="/2018/06/25/animation实现登录框/img.png" alt="img"></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"site-container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>Login<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form__wrapper"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">class</span>=<span class="string">"form__input"</span> <span class="attr">id</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">"form__label__email"</span> <span class="attr">class</span>=<span class="string">"form__label"</span> <span class="attr">for</span>=<span class="string">"email"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"form__label__content"</span>&gt;</span>Email<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form__wrapper"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">class</span>=<span class="string">"form__input"</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">"form__label__password"</span> <span class="attr">class</span>=<span class="string">"form__label"</span> <span class="attr">for</span>=<span class="string">"password"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"form__label__content"</span>&gt;</span>Password<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form__wrapper__submit"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form__wrapper_submit__content"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">name</span>=<span class="string">"submit"</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/* label 文字上移效果 */</span></span><br><span class="line"><span class="selector-class">.active</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(.9) <span class="built_in">translate</span>(-14px, -14px);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">scale</span>(.9) <span class="built_in">translate</span>(-14px, -14px);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">scale</span>(.9) <span class="built_in">translate</span>(-14px, -14px);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">scale</span>(.9) <span class="built_in">translate</span>(-14px, -14px);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(.9) <span class="built_in">translate</span>(-14px, -14px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* btn copy animation.css 效果 */</span></span><br><span class="line">@<span class="keyword">keyframes</span> bounceIn &#123;</span><br><span class="line">    <span class="selector-tag">from</span>,</span><br><span class="line">    25%,</span><br><span class="line">    50%,</span><br><span class="line">    75%,</span><br><span class="line">    <span class="selector-tag">to</span> &#123;</span><br><span class="line">        <span class="attribute">-webkit-animation-timing-function</span>: <span class="built_in">cubic-bezier</span>(0.215, 0.61, 0.355, 1);</span><br><span class="line">        <span class="attribute">animation-timing-function</span>: <span class="built_in">cubic-bezier</span>(0.215, 0.61, 0.355, 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    0% &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">scale3d</span>(1, 1, 1);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale3d</span>(1, 1, 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    25% &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">scale3d</span>(1.01, 1.01, 1.01);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale3d</span>(1.01, 1.01, 1.01);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    50% &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">scale3d</span>(1.02, 1.02, 1.02);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale3d</span>(1.02, 1.02, 1.02);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    75% &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">scale3d</span>(1.01, 1.01, 1.01);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale3d</span>(1.01, 1.01, 1.01);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">to</span> &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">scale3d</span>(1, 1, 1);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale3d</span>(1, 1, 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bounceIn</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-animation-duration</span>: <span class="number">0.75s</span>;</span><br><span class="line">    <span class="attribute">animation-duration</span>: <span class="number">0.75s</span>;</span><br><span class="line">    <span class="attribute">-webkit-animation-name</span>: bounceIn;</span><br><span class="line">    <span class="attribute">animation-name</span>: bounceIn;</span><br><span class="line">    <span class="attribute">animation-iteration-count</span>: infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>详情查看<a href="https://github.com/xiaotiandada/ife" target="_blank" rel="noopener">github地址</a></p>
-</blockquote>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/25/animation实现登录框/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1206,15 +1147,17 @@
 
       
         
-          
-            <h1 id="利用css-animation制作slider"><a href="#利用css-animation制作slider" class="headerlink" title="利用css animation制作slider"></a>利用css animation制作slider</h1><blockquote>
+          <h1 id="利用css-animation制作slider"><a href="#利用css-animation制作slider" class="headerlink" title="利用css animation制作slider"></a>利用css animation制作slider</h1><blockquote>
 <p><a href="http://ife.baidu.com/course/detail/id/33?t=1529924615098#learn" target="_blank" rel="noopener">文章地址</a></p>
 <p><a href="https://xiaotiandada.github.io/ife/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.6/">预览地址</a></p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"img"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/1.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"img"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/2.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"img"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/3.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"img"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/4.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"img"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/5.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"img-bottom"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/1.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"img-bottom"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/2.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"img-bottom"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/3.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"img-bottom"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/4.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"img-bottom"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/5.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line">*,</span><br><span class="line">*<span class="selector-pseudo">::after</span>,</span><br><span class="line">*<span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">html</span>,</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.img</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.img</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.img</span><span class="selector-pseudo">:nth-child(1)</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-ms-transition</span>: .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-o-transition</span>: .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">transition</span>: .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">-moz-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">-ms-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">-o-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">transition-timing-function</span>: ease-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.img</span><span class="selector-pseudo">:nth-child(2)</span> &#123;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-ms-transition</span>: .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-o-transition</span>: .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">transition</span>: .<span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">-moz-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">-ms-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">-o-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">transition-timing-function</span>: ease-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.img</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(0.1);</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">-ms-transition</span>: <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">-o-transition</span>: <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">transition</span>: <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition-timing-function</span>: ease-in;</span><br><span class="line">    <span class="attribute">-moz-transition-timing-function</span>: ease-in;</span><br><span class="line">    <span class="attribute">-ms-transition-timing-function</span>: ease-in;</span><br><span class="line">    <span class="attribute">-o-transition-timing-function</span>: ease-in;</span><br><span class="line">    <span class="attribute">transition-timing-function</span>: ease-in;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.img</span><span class="selector-pseudo">:nth-child(4)</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(2.0);</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">-ms-transition</span>: <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">-o-transition</span>: <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">transition</span>: <span class="number">1s</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">-moz-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">-ms-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">-o-transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">transition-timing-function</span>: ease-out;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.img</span><span class="selector-pseudo">:nth-child(5)</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-360deg) <span class="built_in">scale</span>(0.1);</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: .<span class="number">7s</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: .<span class="number">7s</span>;</span><br><span class="line">    <span class="attribute">-ms-transition</span>: .<span class="number">7s</span>;</span><br><span class="line">    <span class="attribute">-o-transition</span>: .<span class="number">7s</span>;</span><br><span class="line">    <span class="attribute">transition</span>: .<span class="number">7s</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition-timing-function</span>: ease-in-out;</span><br><span class="line">    <span class="attribute">-moz-transition-timing-function</span>: ease-in-out;</span><br><span class="line">    <span class="attribute">-ms-transition-timing-function</span>: ease-in-out;</span><br><span class="line">    <span class="attribute">-o-transition-timing-function</span>: ease-in-out;</span><br><span class="line">    <span class="attribute">transition-timing-function</span>: ease-in-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.bottom</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-50%);</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">850px</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.bottom</span> <span class="selector-tag">div</span><span class="selector-class">.img-bottom</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.bottom</span> <span class="selector-tag">div</span><span class="selector-class">.img-bottom</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.active</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.active</span> &#123;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.active</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1.0) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.active</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1.0) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.active</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(0deg) <span class="built_in">scale</span>(1.0) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> imgBottom = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'img-bottom'</span>)</span><br><span class="line">    <span class="keyword">var</span> imgToggle = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'img'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> attrArr = [</span><br><span class="line">        <span class="string">'leftImg'</span>, <span class="string">'topImg'</span>, <span class="string">'scaleImg'</span>, <span class="string">'scaleImgs'</span>, <span class="string">'scaleRotateImg'</span></span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> getCls = <span class="function"><span class="keyword">function</span> (<span class="params">element</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> element.getAttribute(<span class="string">'class'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> setCls = <span class="function"><span class="keyword">function</span> (<span class="params">element, cls</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> element.setAttribute(<span class="string">'class'</span>, cls)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> addCls = <span class="function"><span class="keyword">function</span> (<span class="params">element, cls</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> baseCls = getCls(element)</span><br><span class="line">        <span class="keyword">if</span> (baseCls.indexOf(cls) == <span class="number">-1</span>) &#123;</span><br><span class="line">            setCls(element, baseCls + <span class="string">' '</span> + cls)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> delCls = <span class="function"><span class="keyword">function</span>(<span class="params">element, cls</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> baseCls = getCls(element)</span><br><span class="line">        <span class="keyword">if</span>(baseCls.indexOf(cls) != <span class="number">-1</span>)&#123;</span><br><span class="line">            setCls(element, baseCls.split(cls).join(<span class="string">' '</span>).replace(<span class="regexp">/\s+/g</span>, <span class="string">' '</span>))</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toggleImg = <span class="function"><span class="keyword">function</span> (<span class="params">i</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            ImgAddIndex(i)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; imgBottom.length; i++) &#123;</span><br><span class="line">        imgBottom[i].onclick = toggleImg(i)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ImgAddIndex</span> (<span class="params">i</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>;j&lt;imgToggle.length;j++) &#123;</span><br><span class="line">            imgToggle[j].style.zIndex = <span class="number">0</span></span><br><span class="line">            delCls(imgToggle[j], <span class="string">'active'</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        addCls(imgToggle[i], <span class="string">'active'</span>)</span><br><span class="line">        imgToggle[i].style.zIndex = <span class="number">9</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/25/利用animation制作slider/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1331,8 +1274,7 @@
 
       
         
-          
-            <h2 id="纯-CSS-制作绕中轴旋转的立方体"><a href="#纯-CSS-制作绕中轴旋转的立方体" class="headerlink" title="纯 CSS 制作绕中轴旋转的立方体"></a>纯 CSS 制作绕中轴旋转的立方体</h2><ul>
+          <h2 id="纯-CSS-制作绕中轴旋转的立方体"><a href="#纯-CSS-制作绕中轴旋转的立方体" class="headerlink" title="纯 CSS 制作绕中轴旋转的立方体"></a>纯 CSS 制作绕中轴旋转的立方体</h2><ul>
 <li><a href="http://ife.baidu.com/course/detail/id/32" target="_blank" rel="noopener">http://ife.baidu.com/course/detail/id/32</a></li>
 <li><a href="https://codepen.io/jordizle/pen/haIdo" target="_blank" rel="noopener">https://codepen.io/jordizle/pen/haIdo</a></li>
 <li>文章已经给了很多资料了</li>
@@ -1340,10 +1282,13 @@
 <blockquote>
 <p><a href="https://xiaotiandada.github.io/ife/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.5%20/">预览地址</a></p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"viewport"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cube"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"side"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cube-image"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"side"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cube-image"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"side"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cube-image"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"side"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cube-image"</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"side"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cube-image"</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"side"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cube-image active"</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br></pre></td><td class="code"><pre><span class="line">*,</span><br><span class="line">*<span class="selector-pseudo">::before</span>,</span><br><span class="line">*<span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">-moz-box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">-webkit-box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#1b1b1b</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">'HelveticaNeue-Light'</span>, <span class="string">'Helvetica Neue Light'</span>, <span class="string">'Helvetica Neue'</span>, Helvetica, Arial, <span class="string">'Lucida Grande'</span>, sans-serif;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">300</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#wrapper</span> &#123;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">20%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.viewport</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-perspective</span>: <span class="number">800px</span>;</span><br><span class="line">    <span class="attribute">-moz-perspective</span>: <span class="number">800px</span>;</span><br><span class="line">    <span class="attribute">-ms-perspective</span>: <span class="number">800px</span>;</span><br><span class="line">    <span class="attribute">-o-perspective</span>: <span class="number">800px</span>;</span><br><span class="line">    <span class="attribute">perspective</span>: <span class="number">800px</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="attribute">-webkit-perspective-origin</span>: <span class="number">50%</span> <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">-moz-perspective-origin</span>: <span class="number">50%</span> <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">-ms-perspective-origin</span>: <span class="number">50%</span> <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">-o-perspective-origin</span>: <span class="number">50%</span> <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">perspective-origin</span>: <span class="number">50%</span> <span class="number">50%</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(0.8, 0.8);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">scale</span>(0.8, 0.8);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">scale</span>(0.8, 0.8);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">scale</span>(0.8, 0.8);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(0.8, 0.8);</span><br><span class="line"></span><br><span class="line">        <span class="attribute">-webkit-transition</span>: .<span class="number">28s</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: .<span class="number">28s</span>;</span><br><span class="line">    <span class="attribute">-ms-transition</span>: .<span class="number">28s</span>;</span><br><span class="line">    <span class="attribute">-o-transition</span>: .<span class="number">28s</span>;</span><br><span class="line">    <span class="attribute">transition</span>: .<span class="number">28s</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">-webkit-transform-style</span>: preserve-<span class="number">3</span>d;</span><br><span class="line">    <span class="attribute">-moz-transform-style</span>: preserve-<span class="number">3</span>d;</span><br><span class="line">    <span class="attribute">-ms-transform-style</span>: preserve-<span class="number">3</span>d;</span><br><span class="line">    <span class="attribute">-o-transform-style</span>: preserve-<span class="number">3</span>d;</span><br><span class="line">    <span class="attribute">transform-style</span>: preserve-<span class="number">3</span>d;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">rotateY</span>(0deg);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">rotateY</span>(0deg);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">rotateY</span>(0deg);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">rotateY</span>(0deg);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">rotateY</span>(0deg);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="attribute">-webkit-transition</span>: <span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: <span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-ms-transition</span>: <span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">-o-transition</span>: <span class="number">5s</span>;</span><br><span class="line">    <span class="attribute">transition</span>: <span class="number">5s</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span>&gt;<span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">opacity</span>: .<span class="number">5</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(0, 191, 255, 0.07);</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="built_in">rgb</span>(0, 170, 255);</span><br><span class="line"></span><br><span class="line">    <span class="attribute">-webkit-touch-callout</span>: none;</span><br><span class="line">    <span class="attribute">-moz-touch-callout</span>: none;</span><br><span class="line">    <span class="attribute">-ms-touch-callout</span>: none;</span><br><span class="line">    <span class="attribute">-o-touch-callout</span>: none;</span><br><span class="line">    <span class="attribute">touch-callout</span>: none;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">-webkit-user-select</span>: none;</span><br><span class="line">    <span class="attribute">-moz-user-select</span>: none;</span><br><span class="line">    <span class="attribute">-ms-user-select</span>: none;</span><br><span class="line">    <span class="attribute">-o-user-select</span>: none;</span><br><span class="line">    <span class="attribute">user-select</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span>&gt;<span class="selector-tag">div</span>&gt;<span class="selector-tag">div</span><span class="selector-class">.cube-image</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(180deg);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotate</span>(180deg);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotate</span>(180deg);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">rotate</span>(180deg);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(180deg);</span><br><span class="line"></span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#1b9bd8</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">-webkit-transition</span>: color <span class="number">600ms</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: color <span class="number">600ms</span>;</span><br><span class="line">    <span class="attribute">-ms-transition</span>: color <span class="number">600ms</span>;</span><br><span class="line">    <span class="attribute">-o-transition</span>: color <span class="number">600ms</span>;</span><br><span class="line">    <span class="attribute">transition</span>: color <span class="number">600ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:active</span> &#123;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">rotateY</span>(360deg);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">rotateY</span>(360deg);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">rotateY</span>(360deg);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">rotateY</span>(360deg);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">rotateY</span>(360deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotateX</span>(90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotateX</span>(90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotateX</span>(90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">rotateX</span>(90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">outline</span>: <span class="number">1px</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(2)</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">outline</span>: <span class="number">1px</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotateY</span>(90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotateY</span>(90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotateY</span>(90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">rotateY</span>(90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">outline</span>: <span class="number">1px</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(4)</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotateY</span>(180deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotateY</span>(180deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotateY</span>(180deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">rotateY</span>(180deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(180deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">outline</span>: <span class="number">1px</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(5)</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotateY</span>(-90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotateY</span>(-90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotateY</span>(-90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">rotateY</span>(-90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(-90deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">outline</span>: <span class="number">1px</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cube</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(6)</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotateX</span>(-90deg) <span class="built_in">rotate</span>(180deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotateX</span>(-90deg) <span class="built_in">rotate</span>(180deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotateX</span>(-90deg) <span class="built_in">rotate</span>(180deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">rotateX</span>(-90deg) <span class="built_in">rotate</span>(180deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(-90deg) <span class="built_in">rotate</span>(180deg) <span class="built_in">translateZ</span>(100px);</span><br><span class="line">    <span class="attribute">outline</span>: <span class="number">1px</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> (max-width: <span class="number">640px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.viewport</span> &#123;</span><br><span class="line">        <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(0.6, 0.6);</span><br><span class="line">        <span class="attribute">-moz-transform</span>: <span class="built_in">scale</span>(0.6, 0.6);</span><br><span class="line">        <span class="attribute">-ms-transform</span>: <span class="built_in">scale</span>(0.6, 0.6);</span><br><span class="line">        <span class="attribute">-o-transform</span>: <span class="built_in">scale</span>(0.6, 0.6);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale</span>(0.6, 0.6);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/24/css旋转立方体/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1460,8 +1405,7 @@
 
       
         
-          
-            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>自己写了一个vue小项目总结总结(为了节省篇幅和大家阅读的时间直接进入正题 认真脸！)</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>自己写了一个vue小项目总结总结(为了节省篇幅和大家阅读的时间直接进入正题 认真脸！)</p>
 <hr>
 <blockquote>
 <p>项目详情可以查看的我Github仓库<a href="https://github.com/xiaotiandada/My-music" target="_blank" rel="noopener">地址</a></p>
@@ -1475,114 +1419,13 @@
 <blockquote>
 <p>github描述文档写了使用了写技术栈 和 界面截图</p>
 </blockquote>
-<h2 id="功能总结"><a href="#功能总结" class="headerlink" title="功能总结"></a>功能总结</h2><blockquote>
-<h3 id="前端api调用"><a href="#前端api调用" class="headerlink" title="前端api调用"></a>前端api调用</h3></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># api</span></span><br><span class="line">import axios from <span class="string">'axios'</span></span><br><span class="line">import store from <span class="string">'@/store/store'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default () =&gt; &#123;</span><br><span class="line">  <span class="built_in">return</span> axios.create(&#123;</span><br><span class="line">    baseURL: `http://123.207.60.132:8081/`,</span><br><span class="line">    headers: &#123;</span><br><span class="line">      Authorization: `Bearer <span class="variable">$&#123;store.state.token&#125;</span>`</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">import Api from <span class="string">'@/services/Api'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">  userLogin(credentials) &#123;</span><br><span class="line">    <span class="built_in">return</span> Api().post(<span class="string">'/userLogin'</span>, credentials)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># music api</span></span><br><span class="line"></span><br><span class="line">import axios from <span class="string">'axios'</span></span><br><span class="line"><span class="built_in">export</span> default () =&gt; &#123;</span><br><span class="line">  <span class="built_in">return</span> axios.create(&#123;</span><br><span class="line">    baseURL: `http://123.207.60.132:3000/`</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">import Api from <span class="string">'@/services/musicApi'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">  <span class="function"><span class="title">getTopList</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> Api().get(<span class="string">'/top/list?idx=3'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>更多内容<a href="https://github.com/xiaotiandada/My-music/tree/master/client/src/services" target="_blank" rel="noopener">地址</a></li>
-</ul>
-<blockquote>
-<h3 id="前端vuex状态管理"><a href="#前端vuex状态管理" class="headerlink" title="前端vuex状态管理"></a>前端vuex状态管理</h3></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">import Vue from <span class="string">'vue'</span></span><br><span class="line">import Vuex from <span class="string">'vuex'</span></span><br><span class="line">import createPersistedState from <span class="string">'vuex-persistedstate'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default new Vuex.Store(&#123;</span><br><span class="line">  strict: <span class="literal">true</span>,</span><br><span class="line">  plugins: [createPersistedState()],</span><br><span class="line">  state: &#123;</span><br><span class="line">    token: null,</span><br><span class="line">    user: null,</span><br><span class="line">    isUserLoggedIn: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  mutations: &#123;</span><br><span class="line">    setToken(state, token) &#123;</span><br><span class="line">      state.token = token</span><br><span class="line">      state.isUserLoggedIn = !!(token)</span><br><span class="line">    &#125;,</span><br><span class="line">    setUser(state, user) &#123;</span><br><span class="line">      state.user = user</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  actions: &#123;</span><br><span class="line">    setToken(&#123; commit &#125;, token) &#123;</span><br><span class="line">      commit(<span class="string">'setToken'</span>, token)</span><br><span class="line">    &#125;,</span><br><span class="line">    setUser(&#123; commit &#125;, user) &#123;</span><br><span class="line">      commit(<span class="string">'setUser'</span>, user)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>更多内容<a href="https://github.com/xiaotiandada/My-music/tree/master/client/src/store" target="_blank" rel="noopener">地址</a></li>
-</ul>
-<blockquote>
-<h3 id="前端界面"><a href="#前端界面" class="headerlink" title="前端界面"></a>前端界面</h3></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 组件使用</span></span><br><span class="line">&lt;v-slider :sliderImg=<span class="string">"sliderImg"</span>&gt;&lt;/v-slider&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 组件引入</span></span><br><span class="line"> import VSlider from <span class="string">'./Slider/Index'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">    <span class="comment"># 声明组件</span></span><br><span class="line">    components: &#123;</span><br><span class="line">        VSlider</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> &#123;</span><br><span class="line">            sliderImg: [</span><br><span class="line">                &#123;</span><br><span class="line">                src: <span class="string">'item1'</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                src: <span class="string">'item2'</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                src: <span class="string">'item3'</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                src: <span class="string">'item4'</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>前端页面基本都是按照这样的方式写的 更多内容<a href="https://github.com/xiaotiandada/My-music/tree/master/client/src/views" target="_blank" rel="noopener">地址</a></li>
-</ul>
-<blockquote>
-<h3 id="后台界面"><a href="#后台界面" class="headerlink" title="后台界面"></a>后台界面</h3></blockquote>
-<ul>
-<li><p>后台界面除了按照前端页面写的以外还用了<a href="https://github.com/PanJiaChen/vue-element-admin" target="_blank" rel="noopener">vue-element-admin</a>后台界面的写法</p>
-</li>
-<li><p>其中侧边栏是根据 router.js 配置的路由并且根据权限动态生成的，这样就省去了写一遍路由还要手动再写一次侧边栏这种麻烦事，但也遇到了一个问题，路由可能会有多层嵌套，很多人反馈自己的侧边栏会有三级，甚至还有五级的。所以重构了一下侧边栏，使用了递归组件，这样不管你多少级，都能愉快的显示了。<a href="https://juejin.im/post/593121aa0ce4630057f70d35#heading-3" target="_blank" rel="noopener">文章地址</a> 复制的hhhh</p>
-</li>
-<li><p>页面还用了icon<a href="https://juejin.im/post/59bb864b5188257e7a427c09" target="_blank" rel="noopener">文章地址</a></p>
-</li>
-<li><p>主页显示用了<a href="https://github.com/ElemeFE/v-charts" target="_blank" rel="noopener">v-charts图表组件</a> 这个基本的使用挺简单的看看文档就ok了 不用另外写文章了</p>
-</li>
-<li><p>更多内容<a href="https://github.com/xiaotiandada/My-music/tree/master/client/src/views" target="_blank" rel="noopener">地址</a></p>
-</li>
-</ul>
-<blockquote>
-<h3 id="前端router"><a href="#前端router" class="headerlink" title="前端router"></a>前端router</h3></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import Vue from <span class="string">'vue'</span></span><br><span class="line">import Router from <span class="string">'vue-router'</span></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> const constantRouterMap = [</span><br><span class="line">  &#123; path: <span class="string">'*'</span>, redirect: <span class="string">'/404'</span>, hidden: <span class="literal">true</span> &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default new Router(&#123;</span><br><span class="line">  mode: <span class="string">'history'</span>, // require service support</span><br><span class="line">  scrollBehavior: () =&gt; (&#123; y: 0 &#125;),</span><br><span class="line">  routes: constantRouterMap</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>更多内容<a href="https://github.com/xiaotiandada/My-music/tree/master/client/src/router" target="_blank" rel="noopener">地址</a></li>
-</ul>
-<blockquote>
-<h3 id="后端基本服务"><a href="#后端基本服务" class="headerlink" title="后端基本服务"></a>后端基本服务</h3></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">const express = require(<span class="string">'express'</span>)</span><br><span class="line">const app = express()</span><br><span class="line">const config = require(<span class="string">'./config/config'</span>)</span><br><span class="line"></span><br><span class="line">const fs = require(<span class="string">'fs'</span>)</span><br><span class="line">const path = require(<span class="string">'path'</span>)</span><br><span class="line">require(<span class="string">'./router/index.js'</span>)(app)</span><br><span class="line">app.use(express.static(path.resolve(__dirname, <span class="string">'./dist'</span>)))</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'*'</span>, <span class="keyword">function</span>(req, res) &#123;</span><br><span class="line">    const html = fs.readFileSync(path.resolve(__dirname, <span class="string">'./dist/index.html'</span>), <span class="string">'utf-8'</span>)</span><br><span class="line">    res.send(html)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(config.port, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  console.log(`server run <span class="variable">$&#123;config.port&#125;</span> port`)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>后台主要使用nodejs express mongodb提供服务</p>
-</li>
-<li><p>功能 用户登录注册</p>
-</li>
-<li><p>功能 管理员登录注册</p>
-</li>
-<li><p>用户的密码加密</p>
-</li>
-<li><p>更多内容<a href="https://github.com/xiaotiandada/My-music/blob/master/service/app.js" target="_blank" rel="noopener">地址</a></p>
-</li>
-</ul>
-<blockquote>
-<h3 id="后端model"><a href="#后端model" class="headerlink" title="后端model"></a>后端model</h3></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">const mongoose = require(<span class="string">'mongoose'</span>)</span><br><span class="line">const Schema = mongoose.Schema</span><br><span class="line">const bcrypt =require(<span class="string">'bcryptjs'</span>)  // 密码加密</span><br><span class="line"><span class="built_in">let</span> SALT_WORK_FACTOR = 10</span><br><span class="line">const config = require(<span class="string">'../config/config'</span>)</span><br><span class="line">mongoose.connect(config.database)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var UserSchema = new Schema(&#123;</span><br><span class="line">  userName: &#123;</span><br><span class="line">    <span class="built_in">type</span>: String,</span><br><span class="line">    unique: <span class="literal">true</span>,  // 不重复</span><br><span class="line">    require: <span class="literal">true</span>  // 不为空</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// 在保存密码之前用bcrypt加密保证密码只有用户知道</span><br><span class="line">UserSchema.pre(<span class="string">'save'</span>, <span class="keyword">function</span> (next)&#123;</span><br><span class="line">  // 保存this指向</span><br><span class="line">  <span class="built_in">let</span> _this = this</span><br><span class="line">  // 判断是否为最新</span><br><span class="line">  <span class="keyword">if</span>(!_this.isModified(<span class="string">'password'</span>))&#123;</span><br><span class="line">      <span class="built_in">return</span> next()</span><br><span class="line">  &#125;</span><br><span class="line">  // 加密EMMM 产生一个salt</span><br><span class="line">  bcrypt.genSalt(SALT_WORK_FACTOR, <span class="keyword">function</span> (err, salt)&#123;</span><br><span class="line">    <span class="keyword">if</span>(err)&#123;</span><br><span class="line">      <span class="built_in">return</span> next(err)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 结合salt 生成 <span class="built_in">hash</span></span><br><span class="line">    bcrypt.hash(_this.password, salt, <span class="keyword">function</span> (err, <span class="built_in">hash</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span>(err)&#123;</span><br><span class="line">        <span class="built_in">return</span> next(err)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      // 用<span class="built_in">hash</span>覆盖明文密码</span><br><span class="line">      _this.password = <span class="built_in">hash</span></span><br><span class="line">      next()</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// 通过bcrypt的compare方法，对再次传入的密码和数据库中保存的加密后的密码进行比较，如果匹配，则登录成功 isMatch 为布尔值</span><br><span class="line">// mongoose 模型扩展 在 methods 对象上扩展</span><br><span class="line">UserSchema.methods.comparePassword = <span class="keyword">function</span> (candidatePassword, cb) &#123;</span><br><span class="line">  bcrypt.compare(candidatePassword, this.password, <span class="keyword">function</span> (err, isMatch) &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="built_in">return</span> cb(err);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cb(null, isMatch);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line">module.exports = mongoose.model(<span class="string">'User'</span>, UserSchema)</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>使用mongoose Schema定义数据模型</p>
-</li>
-<li><p>通过bcrypt密码加密</p>
-</li>
-<li><p>扩展方法 对密码加密</p>
-</li>
-<li><p>更多内容<a href="https://github.com/xiaotiandada/My-music/tree/master/service/model" target="_blank" rel="noopener">地址</a></p>
-</li>
-</ul>
-<blockquote>
-<h3 id="后端controllers"><a href="#后端controllers" class="headerlink" title="后端controllers"></a>后端controllers</h3></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">const User = require(<span class="string">'../model/User'</span>)</span><br><span class="line">const AdminUser = require(<span class="string">'../model/AdminUser'</span>)</span><br><span class="line">const jwt = require(<span class="string">'jsonwebtoken'</span>)</span><br><span class="line">const config = require(<span class="string">'../config/config'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// token</span><br><span class="line"><span class="keyword">function</span> jwtSignUser(user) &#123;</span><br><span class="line">  const ONE_WEEK = 60 * 60 * 24 * 7</span><br><span class="line">  <span class="built_in">return</span> jwt.sign(user, config.authentication.jwtSecret, &#123;</span><br><span class="line">    expiresIn: ONE_WEEK</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  async userLogin(req, res) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">      await User.findOne(&#123;</span><br><span class="line">        userName: req.body.userName</span><br><span class="line">      &#125;, <span class="keyword">function</span> (err, user) &#123;</span><br><span class="line">        .........</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>登录成功返回</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">success: <span class="literal">true</span>,</span><br><span class="line">message: <span class="string">'登录成功'</span>,</span><br><span class="line">token: <span class="string">'token值'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>登录成功返回</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">success: <span class="literal">false</span>,</span><br><span class="line">message: <span class="string">'登录失败'</span>, (或其他信息详情看文件)</span><br><span class="line">token: <span class="string">''</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>对用户的密码判断</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">user.comparePassword(req.body.pass, (err, isMatch) =&gt; &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更多内容<a href="https://github.com/xiaotiandada/My-music/tree/master/service/controllers" target="_blank" rel="noopener">地址</a></p>
-</li>
-</ul>
-<hr>
-<blockquote>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3></blockquote>
-<ul>
-<li><p>通过上面的练习学习了更多新知识</p>
-</li>
-<li><p>更加理解前后端的交互</p>
-</li>
-<li><p>加强了技术掌握程度</p>
-</li>
-<li><p>还有很多不符合现在开发的规范</p>
-</li>
-<li><p>代码不够精简干练</p>
-</li>
-<li><p>基础知识掌握不牢固</p>
-</li>
-<li><p>设计审美水平需要提升</p>
-</li>
-<li><p>……</p>
-</li>
-</ul>
-<p>大概就是这么多吧, 项目还有很多部规范的地方以后会慢慢改正, 虽然是个人里练习的项目, 自己还是话了很多时间和心血</p>
-<p>最后 最后 最后 说一个厚脸皮的话 小哥哥小姐姐如果觉得不错的话可以给小生点一个 <a href="https://github.com/xiaotiandada/My-music" target="_blank" rel="noopener">Star</a> 嘛 谢谢哇QAQ~~</p>
-<p>自己马上就要实习了 有大佬看上带走的吗！QAQ</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/22/vue个人小项目总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1699,40 +1542,19 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p>更多信息可以查看我的github仓库</p>
 </blockquote>
 <h3 id="MDN-定位"><a href="#MDN-定位" class="headerlink" title="MDN 定位"></a>MDN 定位</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/%E5%AE%9A%E4%BD%8D" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/%E5%AE%9A%E4%BD%8D</a></p>
 <h3 id="MDN-定位实战"><a href="#MDN-定位实战" class="headerlink" title="MDN 定位实战"></a>MDN 定位实战</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples</a></p>
 <h3 id="MDN-Flexbox"><a href="#MDN-Flexbox" class="headerlink" title="MDN Flexbox"></a>MDN Flexbox</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox</a></p>
-<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><blockquote>
-<p>这个基础需要恶补</p>
-<p>圣杯布局</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># css</span></span><br><span class="line">body &#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.header,</span><br><span class="line">.footer &#123;</span><br><span class="line">    background: red;</span><br><span class="line">    padding: 20px 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.container &#123;</span><br><span class="line">    padding-left: 200px;</span><br><span class="line">    padding-right: 200px;</span><br><span class="line">    /* min-width: 600px; */</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.content,</span><br><span class="line">.left,</span><br><span class="line">.right &#123;</span><br><span class="line">    height: 200px;</span><br><span class="line">    <span class="built_in">float</span>: left;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.content &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    background: gold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.left &#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background: <span class="comment">#333;</span></span><br><span class="line">    margin-left: -100%;</span><br><span class="line">    right: 200px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.right &#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background: <span class="comment">#eee;</span></span><br><span class="line">    margin-right: -200px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.footer &#123;</span><br><span class="line">    clear: both;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">* html .left &#123;</span><br><span class="line">    left: 200px;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># html</span></span><br><span class="line">&lt;div class=<span class="string">"header"</span>&gt;</span><br><span class="line">    header</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"content"</span>&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iusto cumque quibusdam quis qui sit quisquam iure repellat perferendis. Tempora accusantium dignissimos, magnam est placeat enim dicta dolores nam distinctio!&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"footer"</span>&gt;</span><br><span class="line">    footer</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>双飞翼布局</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#css </span></span><br><span class="line"></span><br><span class="line">.left,</span><br><span class="line">.main,</span><br><span class="line">.right &#123;</span><br><span class="line">    <span class="built_in">float</span>: left;</span><br><span class="line">    min-height: 200px;</span><br><span class="line">&#125;</span><br><span class="line">.left &#123;</span><br><span class="line">    background: gray;</span><br><span class="line">    width: 200px;</span><br><span class="line">    margin-left: -100%;</span><br><span class="line">&#125;</span><br><span class="line">.main &#123;</span><br><span class="line">    background: rgb(252, 102, 102);</span><br><span class="line">    width: 100%;</span><br><span class="line">&#125;</span><br><span class="line">.right &#123;</span><br><span class="line">    background: <span class="comment">#333;</span></span><br><span class="line">    width: 200px;</span><br><span class="line">    margin-left: -200px;</span><br><span class="line">&#125;</span><br><span class="line">.content &#123;</span><br><span class="line">    margin: 0 200px;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#html </span></span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div class=<span class="string">"main"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"content"</span>&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quos labore, ad officiis animi libero ipsam dolorum explicabo placeat facere fuga ex suscipit porro nesciunt quod mollitia corrupti voluptatem a?&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"left"</span>&gt;left&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"right"</span>&gt;right&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>圣杯布局和双飞翼布局的作用和区别</p>
-<blockquote>
-<p><a href="http://www.cnblogs.com/woodk/p/5147085.html" target="_blank" rel="noopener">http://www.cnblogs.com/woodk/p/5147085.html</a></p>
-<p><a href="http://www.cnblogs.com/imwtr/p/4441741.html" target="_blank" rel="noopener">http://www.cnblogs.com/imwtr/p/4441741.html</a></p>
-</blockquote>
-<p>flex 布局</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#css</span></span><br><span class="line">.container &#123;</span><br><span class="line">    -webkit-display:flex;</span><br><span class="line">    display: flex;</span><br><span class="line">    min-height: 200px;</span><br><span class="line">&#125;</span><br><span class="line">.left &#123;</span><br><span class="line">    order: -1;</span><br><span class="line">    background: red;</span><br><span class="line">    flex-basis: 200px;</span><br><span class="line">&#125;</span><br><span class="line">.main &#123;</span><br><span class="line">    background: forestgreen;</span><br><span class="line">    flex-grow: 1;</span><br><span class="line">&#125;</span><br><span class="line">.right&#123;</span><br><span class="line">    background: gold;</span><br><span class="line">    flex-basis: 300px;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#html</span></span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div class=<span class="string">"main"</span>&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quae, veritatis dignissimos laborum debitis id accusantium dolore inventore odit sed! Sunt officiis temporibus esse eum ab fuga ad sequi officia?&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"left"</span>&gt;left&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"right"</span>&gt;right&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>绝对定位布局</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># css </span></span><br><span class="line"></span><br><span class="line">.container &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.main,</span><br><span class="line">.right,</span><br><span class="line">.left &#123;</span><br><span class="line">    top: 0;</span><br><span class="line">    height: 130px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.main &#123;</span><br><span class="line">    background: gray;</span><br><span class="line">    margin: 0 300px 0 200px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.right &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    width: 300px;</span><br><span class="line">    right: 0;</span><br><span class="line">    background: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.left &#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 0;</span><br><span class="line">    background: green;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#html</span></span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"main"</span>&gt;man&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"left"</span>&gt;left&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"right"</span>&gt;right&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>实现布局还原</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#css </span></span><br><span class="line">body&#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">* &#123;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line">.fl&#123;</span><br><span class="line">    <span class="built_in">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line">.ri &#123;</span><br><span class="line">    <span class="built_in">float</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.header&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    min-width: 960px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background: <span class="comment">#333;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.header-content&#123;</span><br><span class="line">    width: 960px;</span><br><span class="line">    height: 100%;</span><br><span class="line">    margin: 0 auto;</span><br><span class="line">&#125;</span><br><span class="line">.header-content .logo&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line">.header-content .logo h1 &#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">    font-size: 40px;</span><br><span class="line">    color: <span class="comment">#fff;</span></span><br><span class="line">    line-height: 100px;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">.header-content .about a&#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    padding: 0 4px;</span><br><span class="line">    color: <span class="comment">#fff;</span></span><br><span class="line">    font-size: 16px;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.banner&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 400px;</span><br><span class="line">    background: rgb(77, 206, 77);</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.list&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    bottom: 10px;</span><br><span class="line">    right: 10%;</span><br><span class="line">    -webkit-display: flex;</span><br><span class="line">    display: flex;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.list span &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    width: 30px;</span><br><span class="line">    height: 40px;</span><br><span class="line">    line-height: 40px;</span><br><span class="line">    background: rgba(238, 238, 238, 0.7);</span><br><span class="line">    border: 1px solid <span class="comment">#333;</span></span><br><span class="line">    <span class="built_in">float</span>: left;</span><br><span class="line">    text-align: center;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">    margin: 0 2px;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">/* .list span:hover&#123;</span><br><span class="line">    height: 50px;</span><br><span class="line">    line-height: 60px;    </span><br><span class="line">&#125; */</span><br><span class="line">.list span.active&#123;</span><br><span class="line">    height: 50px;</span><br><span class="line">    line-height: 60px;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.nav&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 80px;</span><br><span class="line">    background: <span class="comment">#fff;</span></span><br><span class="line">    border-bottom: 1px solid <span class="comment">#eee;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.nav-content &#123;</span><br><span class="line">    width: 960px;</span><br><span class="line">    height: 100%;</span><br><span class="line">    margin: 0 auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.nav-content a&#123;</span><br><span class="line">    display: block;</span><br><span class="line">    <span class="built_in">float</span>: left;</span><br><span class="line">    width: 140px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    line-height: 50PX;</span><br><span class="line">    text-align: center;</span><br><span class="line">    text-decoration: none;</span><br><span class="line">    color: <span class="comment">#000;</span></span><br><span class="line">    border-left: 1px solid <span class="comment">#c5c5c5;</span></span><br><span class="line">    border-top: 1px solid <span class="comment">#c5c5c5;</span></span><br><span class="line">    border-right: 1px solid <span class="comment">#c5c5c5;</span></span><br><span class="line">    border-bottom: 1px solid <span class="comment">#c5c5c5;</span></span><br><span class="line">    background: <span class="comment">#eee;</span></span><br><span class="line">    border-radius: 20px 20px 0 0;</span><br><span class="line">    margin-top: 30px;</span><br><span class="line">&#125;</span><br><span class="line">.nav-content a.active&#123;</span><br><span class="line">    background: <span class="comment">#fff;</span></span><br><span class="line">    border-bottom: 1px solid <span class="comment">#fff;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.main&#123;</span><br><span class="line">    width: 960px;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    margin: 10px auto 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.main .row&#123;</span><br><span class="line">    -webkit-display: flex;</span><br><span class="line">    display: flex;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.main .row .row-content &#123;</span><br><span class="line">    flex: 1;</span><br><span class="line">    height: 200px;</span><br><span class="line">    text-align: center;</span><br><span class="line">    border: 1px solid <span class="comment">#bfbfbf;</span></span><br><span class="line">    /* padding: 80px; */</span><br><span class="line">    margin: 4px;</span><br><span class="line">    align-items: center;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    -webkit-display: flex;</span><br><span class="line">    display: flex;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.footer&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background: <span class="comment">#404040;</span></span><br><span class="line">    text-align: center;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">    font-size: 16px;</span><br><span class="line">    color: <span class="comment">#fff;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># html</span></span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"header"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"header-content"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"logo fl"</span>&gt;</span><br><span class="line">            &lt;h1&gt;logo&lt;/h1&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"about ri"</span>&gt;</span><br><span class="line">            &lt;a href=<span class="string">"#"</span>&gt;Github&lt;/a&gt;</span><br><span class="line">            &lt;a href=<span class="string">"#"</span>&gt;Register&lt;/a&gt;</span><br><span class="line">            &lt;a href=<span class="string">"#"</span>&gt;Login&lt;/a&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"banner"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"list"</span>&gt;</span><br><span class="line">        &lt;span&gt;1&lt;/span&gt;</span><br><span class="line">        &lt;span class=<span class="string">"active"</span>&gt;2&lt;/span&gt;</span><br><span class="line">        &lt;span&gt;3&lt;/span&gt;</span><br><span class="line">        &lt;span&gt;4&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"nav"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"nav-content"</span>&gt;</span><br><span class="line">        &lt;a href=<span class="string">"#"</span> class=<span class="string">"active"</span>&gt;HOME&lt;/a&gt;</span><br><span class="line">        &lt;a href=<span class="string">"#"</span>&gt;PROFLE&lt;/a&gt;</span><br><span class="line">        &lt;a href=<span class="string">"#"</span>&gt;ABOUT&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"main"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"row"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"row-content"</span>&gt;content&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"row-content"</span>&gt;content&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"row-content"</span>&gt;content&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"row"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"row-content"</span>&gt;content&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"row-content"</span>&gt;content&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"row-content"</span>&gt;content&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"row-content"</span>&gt;content&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"row"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"row-content"</span>&gt;content&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"row-content"</span>&gt;content&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"row-content"</span>&gt;content&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"footer"</span>&gt;</span><br><span class="line">    &lt;p&gt;&amp;copy; 2018 ife.baidu.com&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p><a href="https://xiaotiandada.github.io/ife/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6%E9%99%A2/%E7%AC%AC%E4%B8%83%E5%A4%A9%E5%88%B0%E7%AC%AC%E5%85%AB%E5%A4%A9%EF%BC%9A%E5%AD%A6%E4%B9%A0%E5%B8%83%E5%B1%80/%E8%AE%BE%E8%AE%A1%E6%90%9E%E5%B8%83%E5%B1%80%E8%BF%98%E5%8E%9F/%E8%AE%BE%E8%AE%A1%E6%90%9E%E5%B8%83%E5%B1%80%E8%BF%98%E5%8E%9F.html">预览地址</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/20/css布局/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1833,6 +1655,13 @@
           </nav>
 
           
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
 
           
 
@@ -1879,7 +1708,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
@@ -1979,6 +1808,13 @@
   
   
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
   
 
   
@@ -2022,6 +1858,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
