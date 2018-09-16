@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiaotiandada.github.io/"/>
-  <updated>2018-09-15T18:25:14.229Z</updated>
+  <updated>2018-09-16T14:45:03.592Z</updated>
   <id>https://xiaotiandada.github.io/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>parallax.js-制作炫酷的视觉差特效</title>
+    <link href="https://xiaotiandada.github.io/2018/09/16/parallax.js-%E5%88%B6%E4%BD%9C%E7%82%AB%E9%85%B7%E7%9A%84%E8%A7%86%E8%A7%89%E5%B7%AE%E7%89%B9%E6%95%88/"/>
+    <id>https://xiaotiandada.github.io/2018/09/16/parallax.js-制作炫酷的视觉差特效/</id>
+    <published>2018-09-16T13:32:34.000Z</published>
+    <updated>2018-09-16T14:45:03.592Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;利用 Parallax.js 制作炫酷的视觉差特效.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>mpvue外卖小程序</title>
@@ -399,23 +415,6 @@
 &lt;p&gt;然后模仿san官网的动画效果 &lt;a href=&quot;https://baidu.github.io/san/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;san&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这是我模仿的效果 &lt;a href=&quot;https://xiaotiandada.github.io/Case/Anime/sanDemo/app/&quot;&gt;传送们&lt;/a&gt; pc端食用更佳！&lt;/p&gt;
 &lt;p&gt;大佬的实现已经很棒了 个人只让部分动画变得平滑 比如说鼠标移出的时候增加了&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构与算法JavaScript描述二</title>
-    <link href="https://xiaotiandada.github.io/2018/05/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95JavaScript%E6%8F%8F%E8%BF%B0%E4%BA%8C/"/>
-    <id>https://xiaotiandada.github.io/2018/05/17/数据结构与算法JavaScript描述二/</id>
-    <published>2018-05-17T11:42:32.000Z</published>
-    <updated>2018-09-15T18:28:15.193Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;(为神马这里只有二没有一？？？  因为第一章我没有做笔记阿hhhh)&lt;/p&gt;
-&lt;p&gt;可以看github也是一样的 笔记主要都在github上面 &lt;a href=&quot;https://github.com/xiaotiandada/Learn_book/tree/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95JavaScript%E6%8F%8F%E8%BF%B0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
