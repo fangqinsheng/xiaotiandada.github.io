@@ -85,17 +85,23 @@
 
 
 
-<meta name="description" content="是不是一样的 搞一搞就知道了～">
+<meta name="description" content="前言想体验一下写桌面程序，所以使用electron,然后为了快速开发 选择了electron-vue. 找了一些Api 最后发现还是网易云的Api比较好使，然后很多大佬写了网易云音乐了，所以我就走一波歪路~~ 最后就是开干，上键盘一梭哈(尽量少写文字，节省大家阅读时间)。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设置相同宽的textarea和select是一样宽的吗？">
-<meta property="og:url" content="https://xiaotiandada.github.io/2018/07/13/设置相同宽的textarea和select是一样宽的吗？/index.html">
+<meta property="og:title" content="electron-vu打造低配版网易云(Mv版)">
+<meta property="og:url" content="https://xiaotiandada.github.io/2018/10/03/electron-vu打造低配版网易云-Mv版/index.html">
 <meta property="og:site_name" content="小田的博客">
-<meta property="og:description" content="是不是一样的 搞一搞就知道了～">
+<meta property="og:description" content="前言想体验一下写桌面程序，所以使用electron,然后为了快速开发 选择了electron-vue. 找了一些Api 最后发现还是网易云的Api比较好使，然后很多大佬写了网易云音乐了，所以我就走一波歪路~~ 最后就是开干，上键盘一梭哈(尽量少写文字，节省大家阅读时间)。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-15T18:28:58.509Z">
+<meta property="og:image" content="https://xiaotiandada.github.io/2018/10/03/electron-vu打造低配版网易云-Mv版/e11.jpg">
+<meta property="og:image" content="https://xiaotiandada.github.io/2018/10/03/electron-vu打造低配版网易云-Mv版/e1.png">
+<meta property="og:image" content="https://xiaotiandada.github.io/2018/10/03/electron-vu打造低配版网易云-Mv版/e2.png">
+<meta property="og:image" content="https://xiaotiandada.github.io/2018/10/03/electron-vu打造低配版网易云-Mv版/e3.png">
+<meta property="og:image" content="https://xiaotiandada.github.io/2018/10/03/electron-vu打造低配版网易云-Mv版/e22.jpg">
+<meta property="og:updated_time" content="2018-10-02T17:56:46.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设置相同宽的textarea和select是一样宽的吗？">
-<meta name="twitter:description" content="是不是一样的 搞一搞就知道了～">
+<meta name="twitter:title" content="electron-vu打造低配版网易云(Mv版)">
+<meta name="twitter:description" content="前言想体验一下写桌面程序，所以使用electron,然后为了快速开发 选择了electron-vue. 找了一些Api 最后发现还是网易云的Api比较好使，然后很多大佬写了网易云音乐了，所以我就走一波歪路~~ 最后就是开干，上键盘一梭哈(尽量少写文字，节省大家阅读时间)。">
+<meta name="twitter:image" content="https://xiaotiandada.github.io/2018/10/03/electron-vu打造低配版网易云-Mv版/e11.jpg">
 
 
 
@@ -125,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://xiaotiandada.github.io/2018/07/13/设置相同宽的textarea和select是一样宽的吗？/"/>
+  <link rel="canonical" href="https://xiaotiandada.github.io/2018/10/03/electron-vu打造低配版网易云-Mv版/"/>
 
 
 
 
 
-  <title>设置相同宽的textarea和select是一样宽的吗？ | 小田的博客</title>
+  <title>electron-vu打造低配版网易云(Mv版) | 小田的博客</title>
   
 
 
@@ -302,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xiaotiandada.github.io/2018/07/13/设置相同宽的textarea和select是一样宽的吗？/">
+    <link itemprop="mainEntityOfPage" href="https://xiaotiandada.github.io/2018/10/03/electron-vu打造低配版网易云-Mv版/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小田">
@@ -319,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">设置相同宽的textarea和select是一样宽的吗？</h1>
+          <h1 class="post-title" itemprop="name headline">electron-vu打造低配版网易云(Mv版)</h1>
         
 
         <div class="post-meta">
@@ -331,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T01:02:56+08:00">
-                2018-07-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-03T01:01:12+08:00">
+                2018-10-03
               </time>
             
 
@@ -369,21 +375,88 @@
       
 
       
-        <blockquote>
-<p>是不是一样的 搞一搞就知道了～</p>
-</blockquote>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>想体验一下写桌面程序，所以使用electron,然后为了快速开发 选择了electron-vue.</p>
+<p>找了一些Api 最后发现还是网易云的Api比较好使，然后很多大佬写了网易云音乐了，所以我就走一波歪路~~</p>
+<p>最后就是开干，上键盘一梭哈(尽量少写文字，节省大家阅读时间)。</p>
+<p><img src="/2018/10/03/electron-vu打造低配版网易云-Mv版/e11.jpg" alt="梭哈"></p>
 <a id="more"></a>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">class</span>=<span class="string">"textarea"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">cols</span>=<span class="string">""</span> <span class="attr">rows</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"select"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"a"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"b"</span>&gt;</span>b<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"c"</span>&gt;</span>c<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"d"</span>&gt;</span>d<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.textarea</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.select</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>如果在重置border的情况下 设置textarea 和 select的宽度为50px 那么他的宽度是不一样的</p>
-</li>
-<li><p>在测试textarea中 发现textarea宽度为50px 的时候 总宽度为50加上默认的border 1px 就是52px</p>
-</li>
-<li><p>而select在宽度为50px的时候 总宽度为50px 内容减去border 1px 之和后还剩余48px</p>
-</li>
+<h1 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h1><blockquote>
+<p>核心用到的东西</p>
+</blockquote>
+<h2 id="electron-vue"><a href="#electron-vue" class="headerlink" title="electron-vue"></a>electron-vue</h2><p><a href="https://github.com/SimulatedGREG/electron-vue" target="_blank" rel="noopener">electron-vue</a> - 基于 vue (基本上是它听起来的样子) 来构造 electron 应用程序的样板代码。</p>
+<h2 id="element"><a href="#element" class="headerlink" title="element"></a>element</h2><p><a href="http://element.eleme.io/#/zh-CN" target="_blank" rel="noopener">element</a> - Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库.</p>
+<h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2><p><a href="https://github.com/axios/axios" target="_blank" rel="noopener">axios</a> - 基于Promise的HTTP客户端，用于浏览器和node.js(Google 自动翻译，这个大家都懂).</p>
+<h2 id="vue-dplayer"><a href="#vue-dplayer" class="headerlink" title="vue-dplayer"></a>vue-dplayer</h2><p><a href="https://github.com/MoePlayer/vue-dplayer" target="_blank" rel="noopener">vue-dplayer</a> - 基于DPlayer的Vue 2.x视频播放器组件.</p>
+<h2 id="Api"><a href="#Api" class="headerlink" title="Api"></a>Api</h2><p><a href="https://github.com/Binaryify/NeteaseCloudMusicApi" target="_blank" rel="noopener">网易云音乐Node.js API服务</a> - 网易云音乐Node.js API服务(我是部署在自己服务器上面了).</p>
+<h1 id="界面展示"><a href="#界面展示" class="headerlink" title="界面展示"></a>界面展示</h1><p><img src="/2018/10/03/electron-vu打造低配版网易云-Mv版/e1.png" alt="1"><br><img src="/2018/10/03/electron-vu打造低配版网易云-Mv版/e2.png" alt="2"><br><img src="/2018/10/03/electron-vu打造低配版网易云-Mv版/e3.png" alt="3"></p>
+<p>界面很简单，展示Mv然后可以播放，评论会以弹幕的形式显示出来</p>
+<blockquote>
+<p>(弹幕处理得不太好，而且写了很久才写了这么点界面 哎o(︶︿︶)o 唉).</p>
+</blockquote>
+<h1 id="完成进度"><a href="#完成进度" class="headerlink" title="完成进度"></a>完成进度</h1><ul>
+<li style="list-style: none"><input type="checkbox" checked> 基本页面展示</li>
+<li style="list-style: none"><input type="checkbox" checked> 自定义状态栏 支持放大、缩小、关闭</li>
+<li style="list-style: none"><input type="checkbox" checked> 播放Mv 请求点击的Mv然后播放视频</li>
+<li style="list-style: none"><input type="checkbox" checked> 显示弹幕 评论转换弹幕显示</li>
+<li style="list-style: none"><input type="checkbox" checked> 切换页面 上一页、下一页、首页、尾页</li>
+<li style="list-style: none"><input type="checkbox"> 弹幕处理的不好</li>
+<li style="list-style: none"><input type="checkbox"> 没有性能优化</li>
+<li style="list-style: none"><input type="checkbox"> 没有分离组件</li>
+<li style="list-style: none"><input type="checkbox"> 打包没有处理icon(懒~~)</li>
+<li style="list-style: none"><input type="checkbox"> 忘记了…娱乐项目 没有注意很多 随缘随缘</li>
 </ul>
-<p>所以不知道的地方 搞一搞就知道了！hhhh</p>
+<h1 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h1><blockquote>
+<p>技术实现过程和一些踩过的坑</p>
+</blockquote>
+<h2 id="自定义状态栏"><a href="#自定义状态栏" class="headerlink" title="自定义状态栏"></a>自定义状态栏</h2><p>因为win自带的状态栏太丑了，所以自己模拟了一个，electron-vue 通过 ipcMain 发送消息</p>
+<p><a href="https://electronjs.org/docs/api/ipc-main#ipcmain" target="_blank" rel="noopener">ipcMain</a> - 从主进程到渲染进程的异步通信。</p>
+<blockquote>
+<p>ipcMain模块是EventEmitter类的一个实例。 当在主进程中使用时，它处理从渲染器进程（网页）发送出来的异步和同步信息。 从渲染器进程发送的消息将被发送到该模块。 – copy c &amp; v</p>
+</blockquote>
+<p><a href="https://blog.csdn.net/liyangyang08/article/details/78608822?locationNum=7&amp;fps=1" target="_blank" rel="noopener">参考文章</a></p>
+<ol>
+<li>在 index.js 修改窗口大小.</li>
+</ol>
+<p><a href="https://electronjs.org/docs/api/browser-window#winsetcontentsizewidth-height-animate" target="_blank" rel="noopener">BrowserWindow</a> - 创建和控制浏览器窗口。</p>
+<blockquote>
+<p>里面的参数自己可以看文档哦~</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mainWindow = <span class="keyword">new</span> BrowserWindow(&#123;</span><br><span class="line">   height: <span class="number">710</span>,</span><br><span class="line">   width: <span class="number">1200</span>,</span><br><span class="line">   useContentSize: <span class="literal">true</span>,</span><br><span class="line">   frame: <span class="literal">false</span></span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+<p>设置之后，有一个细节需要了解一下.</p>
+<p><a href="https://electronjs.org/docs/api/frameless-window" target="_blank" rel="noopener">可拖拽区</a> - 默认情况下, 无框窗口是 non-draggable 的….. (总之就是，你需要设置一下)</p>
+<p>要使整个窗口可拖拽, 您可以添加 -webkit-app-region: drag 作为 body 的样式:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body style="-webkit-app-region: drag"&gt;&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<p>请注意, 如果您已使整个窗口draggable, 则必须将按钮标记为 non-draggable, 否则用户将无法单击它们:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-app-region</span>: no-drag;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果你设置自定义标题栏为 draggable, 你也需要标题栏中所有的按钮都设为 non-draggable。</p>
+<blockquote>
+<p>详情可以看文档呢。</p>
+</blockquote>
+<ol>
+<li>模拟事件</li>
+</ol>
+<p>参考文章里面有介绍到，流程大概就是这样。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 引入</span></span><br><span class="line"><span class="keyword">const</span> &#123;<span class="attr">ipcRenderer</span>: ipc&#125; = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义事件</span></span><br><span class="line">winMin () &#123;</span><br><span class="line">    ipc.send(<span class="string">'window-min'</span>)</span><br><span class="line">&#125;,</span><br><span class="line">winEnlargeOrNarrow () &#123;</span><br><span class="line">    ipc.send(<span class="string">'win-enlarge-or-narrow'</span>)</span><br><span class="line">&#125;,</span><br><span class="line">winClose () &#123;</span><br><span class="line">    ipc.send(<span class="string">'window-close'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 模拟 最小 放大 还原 关闭 事件</span></span><br><span class="line"><span class="comment"> * index.js 修改</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">ipcMain.on(<span class="string">'window-min'</span>, () =&gt; &#123;</span><br><span class="line">  mainWindow.minimize()</span><br><span class="line">&#125;)</span><br><span class="line">ipcMain.on(<span class="string">'win-enlarge-or-narrow'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (mainWindow.isMaximized()) &#123;</span><br><span class="line">    mainWindow.unmaximize()</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    mainWindow.maximize()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">ipcMain.on(<span class="string">'window-close'</span>, () =&gt; &#123;</span><br><span class="line">  mainWindow.close()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>不想写的话，可以复制粘贴我的一梭哈.</p>
+</blockquote>
+<h2 id="评论转弹幕"><a href="#评论转弹幕" class="headerlink" title="评论转弹幕"></a>评论转弹幕</h2><p>播放器提供了相应的接口，只需要获取评论转换相应的数据就可以了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">transformComments (commentsArr) &#123;&#125;</span><br><span class="line"></span><br><span class="line">dp.danmaku.draw(&#123;</span><br><span class="line">   text: <span class="string">'DIYgod is amazing'</span>,</span><br><span class="line">   color: <span class="string">'#fff'</span>,</span><br><span class="line">   type: <span class="string">'top'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/xiaotiandada/E-video/blob/master/src/renderer/view/index.vue" target="_blank" rel="noopener">源码地址</a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><blockquote>
+<p>封装方法</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> axios.create(&#123;</span><br><span class="line">    baseURL: <span class="string">'http://123.207.60.132:3000'</span>,</span><br><span class="line">    timeout: <span class="number">1000</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-----------------</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Api <span class="keyword">from</span> <span class="string">'./Api'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 默认30条数据，可以自定义</span></span><br><span class="line"><span class="comment">   * @param limit</span></span><br><span class="line"><span class="comment">   * @returns &#123;*&#125;</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  getTopMv (limit = <span class="number">30</span>, offset = <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> Api().get(<span class="string">`/top/mv?limit=<span class="subst">$&#123;limit&#125;</span>&amp;offset=<span class="subst">$&#123;offset&#125;</span>`</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  getMvId (id) &#123;</span><br><span class="line">    <span class="keyword">return</span> Api().get(<span class="string">`/mv?mvid=<span class="subst">$&#123;id&#125;</span>`</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  getMvComments (id) &#123;</span><br><span class="line">    <span class="keyword">return</span> Api().get(<span class="string">`/comment/mv?id=<span class="subst">$&#123;id&#125;</span>`</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>有的懒得打注释了， 不懂得可以问我哦</p>
+<p>有更优化的方法也可以滴滴我</p>
+</blockquote>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>因为纯粹是为了体验，所以没写很多功能(不要干死我hhhhh)</p>
+<p>如果阅读中，有什么不明白的 可以问我，也可以去群里交流</p>
+<p>Qq：952822399 </p>
+<p>Qq群 iD 718639024</p>
+<p>大家也可以进来互相交流~</p>
+<p>最后就是厚脸皮的一步(觉得不错可以点个star哦~~~)</p>
+<p><img src="/2018/10/03/electron-vu打造低配版网易云-Mv版/e22.jpg" alt="比心"></p>
 
       
     </div>
@@ -408,8 +481,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/06/用vue做一个简单的登录流程/" rel="next" title="用vue做一个简单的登录流程">
-                <i class="fa fa-chevron-left"></i> 用vue做一个简单的登录流程
+              <a href="/2018/09/16/parallax.js-制作炫酷的视觉差特效/" rel="next" title="parallax.js-制作炫酷的视觉差特效">
+                <i class="fa fa-chevron-left"></i> parallax.js-制作炫酷的视觉差特效
               </a>
             
           </div>
@@ -417,10 +490,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/01/为开源社区贡献绵薄之力/" rel="prev" title="为开源社区贡献绵薄之力">
-                为开源社区贡献绵薄之力 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -472,8 +541,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -548,6 +626,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术栈"><span class="nav-number">2.</span> <span class="nav-text">技术栈</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#electron-vue"><span class="nav-number">2.1.</span> <span class="nav-text">electron-vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#element"><span class="nav-number">2.2.</span> <span class="nav-text">element</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#axios"><span class="nav-number">2.3.</span> <span class="nav-text">axios</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-dplayer"><span class="nav-number">2.4.</span> <span class="nav-text">vue-dplayer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Api"><span class="nav-number">2.5.</span> <span class="nav-text">Api</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#界面展示"><span class="nav-number">3.</span> <span class="nav-text">界面展示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#完成进度"><span class="nav-number">4.</span> <span class="nav-text">完成进度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术实现"><span class="nav-number">5.</span> <span class="nav-text">技术实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义状态栏"><span class="nav-number">5.1.</span> <span class="nav-text">自定义状态栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#评论转弹幕"><span class="nav-number">5.2.</span> <span class="nav-text">评论转弹幕</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">5.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiaotiandada.github.io/"/>
-  <updated>2018-09-16T14:45:03.592Z</updated>
+  <updated>2018-10-02T17:56:46.630Z</updated>
   <id>https://xiaotiandada.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>electron-vu打造低配版网易云(Mv版)</title>
+    <link href="https://xiaotiandada.github.io/2018/10/03/electron-vu%E6%89%93%E9%80%A0%E4%BD%8E%E9%85%8D%E7%89%88%E7%BD%91%E6%98%93%E4%BA%91-Mv%E7%89%88/"/>
+    <id>https://xiaotiandada.github.io/2018/10/03/electron-vu打造低配版网易云-Mv版/</id>
+    <published>2018-10-02T17:01:12.000Z</published>
+    <updated>2018-10-02T17:56:46.630Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;想体验一下写桌面程序，所以使用electron,然后为了快速开发 选择了electron-vue.&lt;/p&gt;
+&lt;p&gt;找了一些Api 最后发现还是网易云的Api比较好使，然后很多大佬写了网易云音乐了，所以我就走一波歪路~~&lt;/p&gt;
+&lt;p&gt;最后就是开干，上键盘一梭哈(尽量少写文字，节省大家阅读时间)。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/10/03/electron-vu打造低配版网易云-Mv版/e11.jpg&quot; alt=&quot;梭哈&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>parallax.js-制作炫酷的视觉差特效</title>
@@ -396,25 +415,6 @@
     <summary type="html">
     
       &lt;p&gt;每天十分钟学习新东西系列文章仓库地址　&lt;a href=&quot;https://github.com/xiaotiandada/ten-minutes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>模仿san的hover动画</title>
-    <link href="https://xiaotiandada.github.io/2018/05/19/%E6%A8%A1%E4%BB%BFsan%E7%9A%84hover%E5%8A%A8%E7%94%BB/"/>
-    <id>https://xiaotiandada.github.io/2018/05/19/模仿san的hover动画/</id>
-    <published>2018-05-18T17:10:14.000Z</published>
-    <updated>2018-09-15T18:28:30.516Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在百度前端技术学院学习 设计师学院 绿(大佬)的课程 (第一课QAQ) &lt;a href=&quot;http://ife.baidu.com/course/detail/id/18&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;然后模仿san官网的动画效果 &lt;a href=&quot;https://baidu.github.io/san/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;san&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;这是我模仿的效果 &lt;a href=&quot;https://xiaotiandada.github.io/Case/Anime/sanDemo/app/&quot;&gt;传送们&lt;/a&gt; pc端食用更佳！&lt;/p&gt;
-&lt;p&gt;大佬的实现已经很棒了 个人只让部分动画变得平滑 比如说鼠标移出的时候增加了&lt;/p&gt;
     
     </summary>
     
