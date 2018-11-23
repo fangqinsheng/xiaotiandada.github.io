@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiaotiandada.github.io/"/>
-  <updated>2018-10-26T07:35:19.092Z</updated>
+  <updated>2018-11-23T15:37:45.315Z</updated>
   <id>https://xiaotiandada.github.io/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React案列</title>
+    <link href="https://xiaotiandada.github.io/2018/11/23/React%E6%A1%88%E5%88%97/"/>
+    <id>https://xiaotiandada.github.io/2018/11/23/React案列/</id>
+    <published>2018-11-23T09:47:51.000Z</published>
+    <updated>2018-11-23T15:37:45.315Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;React案列&quot;&gt;&lt;a href=&quot;#React案列&quot; class=&quot;headerlink&quot; title=&quot;React案列&quot;&gt;&lt;/a&gt;React案列&lt;/h1&gt;&lt;p&gt;React 做的小案列&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>electron-vu打造低配版网易云(Mv版)</title>
@@ -387,22 +403,6 @@
     <id>https://xiaotiandada.github.io/2018/05/27/每天十分钟学习新东西-carbon/</id>
     <published>2018-05-27T12:41:05.000Z</published>
     <updated>2018-09-15T18:28:34.958Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;每天十分钟学习新东西系列文章仓库地址　&lt;a href=&quot;https://github.com/xiaotiandada/ten-minutes&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>每天十分钟学习新东西-warriosjs</title>
-    <link href="https://xiaotiandada.github.io/2018/05/23/%E6%AF%8F%E5%A4%A9%E5%8D%81%E5%88%86%E9%92%9F%E5%AD%A6%E4%B9%A0%E6%96%B0%E4%B8%9C%E8%A5%BF-warriosjs/"/>
-    <id>https://xiaotiandada.github.io/2018/05/23/每天十分钟学习新东西-warriosjs/</id>
-    <published>2018-05-22T16:19:50.000Z</published>
-    <updated>2018-09-15T18:28:40.567Z</updated>
     
     <summary type="html">
     
